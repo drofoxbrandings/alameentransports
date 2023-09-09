@@ -33,7 +33,7 @@ const address = [
   "Dubai,UAE",
   " +971 50 505 8724",
   "+971 2 555 0509",
-  " info@alameenlimousine.com",
+  "info@alameenlimousine.com",
 ];
 
 const MainNav = () => {
