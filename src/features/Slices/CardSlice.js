@@ -1,18 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isExpand: false,
+  card0isExpand: false,
+  card1isExpand: false,
+  card2isExpand: false,
+  card3isExpand: false,
 };
 
 const cardSlice = createSlice({
   name: "cards",
   initialState,
   reducers: {
-    expand: (state) => {
-      state.isExpand = true;
+    expand: (state, action) => {
+      state[action.payload] = true;
     },
-    contract: (state) => {
-      state.isExpand = false;
+    contract: (state, action) => {
+      state[action.payload] = false;
     },
   },
 });

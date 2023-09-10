@@ -1,11 +1,8 @@
-import { Box, Button, Grid, Link, Typography } from "@mui/material";
+import { Box, Button, Grid, IconButton, Link, Typography } from "@mui/material";
 import React from "react";
 import TitleCard from "./Cards/TitleCard";
-import limousineTitleImage from "../assets/limousinetitlecardImage.jpg";
-import passengerTitleImage from "../assets/passengertitlecardImage.jpg";
-import tourTitleImage from "../assets/tourtitlecardImage.jpg";
-import schoolTitleImage from "../assets/schooltitlecardImage.jpg";
-
+import { titleCards } from "../constants/Constants";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 const Hero = ({
   image,
   title,
@@ -14,6 +11,7 @@ const Hero = ({
   btnFn,
   isFullWidthHero,
   altTxt,
+  hasVideo,
 }) => {
   return (
     <>
@@ -85,38 +83,17 @@ const Hero = ({
             }}
           >
             <Grid container spacing={{ xs: 2 }}>
-              <Grid item xs={12}>
-                <Link href="/limousine-service" underline="none">
-                  <TitleCard image={limousineTitleImage} title="Limousine" />
-                </Link>
-              </Grid>
-
-              <Grid item xs={12}>
-                <Link href="/tour-by-luxury-bus" underline="none">
-                  <TitleCard
-                    image={tourTitleImage}
-                    title={`Tour by \n luxury bus`}
-                  />
-                </Link>
-              </Grid>
-
-              <Grid item xs={12}>
-                <Link href="/passenger-transportation" underline="none">
-                  <TitleCard
-                    image={passengerTitleImage}
-                    title={`passenger \n transports`}
-                  />
-                </Link>
-              </Grid>
-
-              <Grid item xs={12}>
-                <Link href="/school-transportation" underline="none">
-                  <TitleCard
-                    image={schoolTitleImage}
-                    title={`school \n transports`}
-                  />
-                </Link>
-              </Grid>
+              {titleCards.map((item, index) => (
+                <Grid item xs={12} key={index}>
+                  <Link href={item.link} underline="none">
+                    <TitleCard
+                      image={item.image}
+                      title={item.title}
+                      cardId={index}
+                    />
+                  </Link>
+                </Grid>
+              ))}
             </Grid>
           </Grid>
         </Grid>
@@ -136,6 +113,7 @@ const Hero = ({
               },
               display: "flex",
               justifyContent: "flex-end",
+              position: "relative",
             }}
           >
             <img src={image} alt={altTxt} />
@@ -158,6 +136,17 @@ const Hero = ({
                 margin: "0 1rem",
               }}
             >
+              {!!hasVideo && (
+                <Button
+                  variant="outlined"
+                  size="large"
+                  color="primary"
+                  startIcon={<PlayCircleOutlineIcon />}
+                  onClick={btnFn}
+                >
+                  Play video
+                </Button>
+              )}
               <Typography
                 variant="h1"
                 sx={{

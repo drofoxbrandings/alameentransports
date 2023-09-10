@@ -3,17 +3,19 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { contract, expand } from "../../features/Slices/CardSlice";
 
-const TitleCard = ({ image, altTxt, title }) => {
+const TitleCard = ({ image, altTxt, title, cardId }) => {
   const dispatch = useDispatch();
-  const _rsIsExpanded = useSelector((state) => state.cards.isExpand);
+  const _rsIsExpanded = useSelector(
+    (state) => state.cards[`card${cardId}isExpand`]
+  );
   return (
-    <Card sx={{  margin: ".5rem 0" }}>
+    <Card sx={{ margin: ".5rem 0" }}>
       <Grid
         container
         // spacing={2}
         sx={{ alignItems: "center", justifyContent: "space-between" }}
-        onMouseEnter={() => dispatch(expand())}
-        onMouseLeave={() => dispatch(contract())}
+        onMouseEnter={() => dispatch(expand(`card${cardId}isExpand`))}
+        onMouseLeave={() => dispatch(contract(`card${cardId}isExpand`))}
       >
         <Grid item xs={6}>
           <CardMedia
@@ -33,7 +35,7 @@ const TitleCard = ({ image, altTxt, title }) => {
         <Grid item xs={5}>
           <Typography
             variant="button"
-            sx={{ textTransform: "uppercase", fontWeight: '700' }}
+            sx={{ textTransform: "uppercase", fontWeight: "700" }}
           >
             {title}
           </Typography>
