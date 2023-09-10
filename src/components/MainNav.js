@@ -20,12 +20,14 @@ import { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import ArrowDropDownSharpIcon from "@mui/icons-material/ArrowDropDownSharp";
-import ArrowDropUpSharpIcon from "@mui/icons-material/ArrowDropUpSharp";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MailIcon from "@mui/icons-material/Mail";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const pages = ["HOME", "ABOUT US", "COMPANY", "CONTACT US"];
 const address = [
@@ -44,9 +46,6 @@ const MainNav = () => {
   const [anchorEl, setAnchorEl] = useState("");
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
-  };
-  const handleOpen = (event) => {
-    setAnchorEl(event.currentTarget);
   };
 
   const handleClose = () => {
@@ -89,7 +88,6 @@ const MainNav = () => {
             }}
           >
             <List>
-              {/* <ListItemButton> */}
               <ListItemIcon
                 sx={{
                   display: "flex",
@@ -121,41 +119,37 @@ const MainNav = () => {
                 </Box>
 
                 {pages.map((item, index) => (
-                  <ListItemIcon
-                    sx={{
-                      display: "flex",
-                      flexDirection: "row-reverse",
-                      marginRight: "250px",
-                    }}
-                  >
-                    {index === 2 &&
-                      (anchorEl ? (
-                        <ArrowDropUpSharpIcon onClick={handleClose} />
+                  <Box key={index} sx={{ marginLeft: "33px" }}>
+                    <ListItemIcon sx={{ display: "flex" }}>
+                      {index === 2 ? (
+                        <Accordion
+                          sx={{
+                            boxShadow: "0px 0px 0px 0px",
+                            position: "relative",
+                            left: "-16px",
+                          }}
+                        >
+                          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                            <Typography sx={{ fontWeight: "bold" }}>
+                              {item}
+                            </Typography>
+                          </AccordionSummary>
+                          <AccordionDetails>
+                            <Typography>Limousine</Typography>
+                            <Typography>Passenger transport</Typography>
+                            <Typography>Tour by luxury bus</Typography>
+                            <Typography>School bus</Typography>
+                          </AccordionDetails>
+                        </Accordion>
                       ) : (
-                        <ArrowDropDownSharpIcon
-                          aria-controls="simple-menu"
-                          aria-haspopup="true"
-                          onClick={handleOpen}
-                          variant="outlined"
-                        />
-                      ))}
-                    <Menu
-                      id="simple-menu"
-                      anchorEl={anchorEl}
-                      keepMounted
-                      open={Boolean(anchorEl)}
-                      onClose={handleClose}
-                      sx={{ marginTop: "200px", border: "none" }}
-                    >
-                      <MenuItem>Limousine</MenuItem>
-                      <MenuItem>Passenger transport</MenuItem>
-                      <MenuItem>Tour by luxury bus</MenuItem>
-                      <MenuItem>School bus</MenuItem>
-                    </Menu>
-                    <ListItemText sx={{ color: "#1c1c1c", marginLeft: "33px" }}>
-                      {item}
-                    </ListItemText>
-                  </ListItemIcon>
+                        <Typography
+                          sx={{ color: "#1c1c1c", fontWeight: "bold" }}
+                        >
+                          {item}
+                        </Typography>
+                      )}
+                    </ListItemIcon>
+                  </Box>
                 ))}
                 <ListItemIcon
                   sx={{
@@ -238,23 +232,21 @@ const MainNav = () => {
                   anchorEl={anchorEl}
                   open={Boolean(anchorEl)}
                   onClose={handleClose}
-                 
                   anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'center',
+                    vertical: "bottom",
+                    horizontal: "center",
                   }}
                   transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'center',
+                    vertical: "top",
+                    horizontal: "center",
                   }}
-                  
-                  sx={{marginTop:"20px",marginLeft:"-70px"}}
+                  sx={{ marginTop: "20px", marginLeft: "-70px" }}
                 >
-                  <Box sx={{width:"200px"}}>
-                  <MenuItem >Limousine</MenuItem>
-                  <MenuItem>Passenger transport</MenuItem>
-                  <MenuItem>Tour by luxury bus</MenuItem>
-                  <MenuItem>School bus</MenuItem>
+                  <Box sx={{ width: "200px" }}>
+                    <MenuItem>Limousine</MenuItem>
+                    <MenuItem>Passenger transport</MenuItem>
+                    <MenuItem>Tour by luxury bus</MenuItem>
+                    <MenuItem>School bus</MenuItem>
                   </Box>
                 </Menu>
               </div>
