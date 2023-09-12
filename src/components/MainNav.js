@@ -1,8 +1,8 @@
 "use client";
 import * as React from "react";
+import Image from "../assets/logo.svg";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Image from "../assets/logo.svg";
 import {
   AppBar,
   Drawer,
@@ -10,131 +10,118 @@ import {
   List,
   ListItemIcon,
   ListItemText,
+  ListItem,
   Toolbar,
   useMediaQuery,
   Grid,
-  Box,
-} from "@mui/material";
-import { Button, Menu, MenuItem } from "@mui/material";
-import { useState } from "react";
-import { useTheme } from "@mui/material/styles";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import SmartphoneIcon from "@mui/icons-material/Smartphone";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import MailIcon from "@mui/icons-material/Mail";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+  Box
+} from '@mui/material'
+import { Button, Menu, MenuItem } from '@mui/material'
+import { useState } from 'react'
+import { useTheme } from '@mui/material/styles'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
+import SmartphoneIcon from '@mui/icons-material/Smartphone'
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
+import MailIcon from '@mui/icons-material/Mail'
+import Accordion from '@mui/material/Accordion'
+import AccordionSummary from '@mui/material/AccordionSummary'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-const pages = ["HOME", "ABOUT US", "COMPANY", "CONTACT US"];
-const address = [
-  " Abu Dhabi, UAE",
-  "Dubai,UAE",
-  " +971 50 505 8724",
-  "+971 2 555 0509",
-  "info@alameenlimousine.com",
-];
 
-const MainNav = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+const MainNav = ({ navMenu,address}) => {
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
-  const [openDrawer, setOpenDrawer] = useState(false);
-  const [anchorEl, setAnchorEl] = useState("");
+  const [openDrawer, setOpenDrawer] = useState(false)
+  const [anchorEl, setAnchorEl] = useState('')
   const toggleDrawer = () => {
-    setOpenDrawer(!openDrawer);
-  };
+    setOpenDrawer(!openDrawer)
+  }
 
   const handleClose = () => {
-    setAnchorEl(null);
-  };
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+    setAnchorEl(null)
+  }
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget)
+  }
 
   const mobile = (
     <Container
-      maxWidth="100%"
-      sx={{ backgroundColor: "#ffffff", padding: "10px" }}
+      maxWidth='100%'
+      sx={{ backgroundColor: "white.main", padding: '10px' }}
     >
-      <Toolbar>
-        <Typography
-          variant="h6"
-          component="div"
+      <Toolbar sx={{ display: 'flex', flexDirection: 'row-reverse' }}>
+        <IconButton edge='start' aria-label='menu' onClick={toggleDrawer}>
+          <MenuIcon sx={{color:"secondary.main"}} />
+        </IconButton>
+        <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+          <img src={Image} width={150} />
+        </Typography>
+      </Toolbar>
+
+      <React.Fragment>
+        <Drawer
+          anchor='top'
+          open={openDrawer}
+          onClose={toggleDrawer}
           sx={{
-            flexGrow: 1,
-            fontWeight: 540,
-            fontSize: ".9rem",
+            '& .MuiDrawer-paper': {
+              height: 1500
+            }
           }}
         >
-          <Grid item xs={12} md={6} sx={{ img: { width: "150px" } }}>
-            <Box sx={{ position: "absolute", left: "10px", top: "-33px" }}>
-              <img width={400} height={120} src={Image} alt="logo" />
-            </Box>
-          </Grid>
-        </Typography>
-        <React.Fragment>
-          <Drawer
-            anchor="top"
-            open={openDrawer}
-            onClose={toggleDrawer}
-            sx={{
-              "& .MuiDrawer-paper": {
-                height: 1500,
-              },
-            }}
-          >
-            <List>
-              <ListItemIcon
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginLeft: "15px",
-                  marginTop: "100px",
-                }}
-              >
-                <Box sx={{ display: "flex", flexDirection: "row-reverse" }}>
-                  <IconButton
-                    sx={{
-                      position: "absolute",
-                      right: "33px",
-                      top: "15px",
-                    }}
-                    onClick={toggleDrawer}
-                  >
-                    <CloseIcon sx={{ fontSize: { md: "25px", sm: "40px" } }} />
-                  </IconButton>
+         
+          <List sx={{ display: 'flex', flexDirection: 'row-reverse' }}>
+            <ListItem
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-end',
+                padding: ' 30px'
+              }}
+            >
+              <IconButton onClick={toggleDrawer}>
+                <CloseIcon sx={{ fontSize: { md: '25px', sm: '40px' } ,color:"secondary.main"}} />
+              </IconButton>
+            </ListItem>
+            <ListItem
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-start',
+                padding: '10px 30px'
+              }}
+            >
+              <Typography variant='h6' component='div'>
+                <img src={Image} width={150} />
+              </Typography>
+
+              {navMenu.map((item, index) => (
+                <Box key={index}>
                   <ListItemText
                     sx={{
-                      position: "absolute",
-                      left: "33px",
-                      top: "-23px",
+                      display: 'flex',
+                      flexDirection: 'column',
+                      paddingLeft: '18px'
                     }}
                   >
-                    <img width={150} height={120} src={Image} alt="hello" />
-                  </ListItemText>
-                </Box>
-
-                {pages.map((item, index) => (
-                  <Box key={index} sx={{ marginLeft: "33px" }}>
-                    <ListItemIcon sx={{ display: "flex" }}>
+                    <ListItemIcon sx={{ display: 'flex' }}>
                       {index === 2 ? (
                         <Accordion
                           sx={{
-                            boxShadow: "0px 0px 0px 0px",
-                            position: "relative",
-                            left: "-16px",
+                            boxShadow: '0px 0px 0px 0px',
+                            translate: '-15px'
                           }}
                         >
                           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography sx={{ fontWeight: "bold" }}>
+                            <Typography sx={{ fontWeight: 'bold' }}>
                               {item}
                             </Typography>
                           </AccordionSummary>
-                          <AccordionDetails>
+                          <AccordionDetails sx={{color:"secondary.light"}}>
                             <Typography>Limousine</Typography>
                             <Typography>Passenger transport</Typography>
                             <Typography>Tour by luxury bus</Typography>
@@ -143,106 +130,79 @@ const MainNav = () => {
                         </Accordion>
                       ) : (
                         <Typography
-                          sx={{ color: "#1c1c1c", fontWeight: "bold" }}
+                          sx={{ color: 'secondary.main', fontWeight: 'bold' }}
                         >
                           {item}
                         </Typography>
                       )}
                     </ListItemIcon>
-                  </Box>
-                ))}
-                <ListItemIcon
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    marginLeft: "27px",
-                    marginTop: "220px",
-                  }}
-                >
-                  {address.map((item, index) => (
-                    <ListItemIcon sx={{ color: "#A81D34", marginTop: "10px" }}>
-                      {index === 0 && (
-                        <LocationOnIcon sx={{ marginTop: "2px" }} />
-                      )}
-                      {index === 1 && (
-                        <LocationOnIcon sx={{ marginTop: "2px" }} />
-                      )}
-                      {index === 2 && (
-                        <SmartphoneIcon sx={{ marginTop: "2px" }} />
-                      )}
-                      {index === 3 && (
-                        <LocalPhoneIcon sx={{ marginTop: "2px" }} />
-                      )}
-                      {index === 4 && <MailIcon sx={{ marginTop: "3px" }} />}
-
-                      <ListItemText
-                        sx={{
-                          color: "#A81D34",
-                          marginLeft: "20px",
-                        }}
-                      >
-                        {item}
-                      </ListItemText>
-                    </ListItemIcon>
-                  ))}
-                </ListItemIcon>
-              </ListItemIcon>
-            </List>
-          </Drawer>
-          <IconButton
-            sx={{ position: "absolute", right: "10px", top: "4px" }}
-            onClick={toggleDrawer}
+                  </ListItemText>
+                </Box>
+              ))}
+            </ListItem>
+          </List>
+                
+          <List
+            sx={{ display: 'flex', flexDirection: 'column', padding: '42px' }}
           >
-            <MenuIcon sx={{ fontSize: { md: "25px", sm: "40px" } }} />
-          </IconButton>
-        </React.Fragment>
-      </Toolbar>
+            {address.map((item, index) => {
+              return (
+                <>
+                  <ListItemIcon sx={{ color: "primary.dark" }}>
+                    {index === 0 && <LocationOnIcon sx={{ padding: '3px' }} />}
+                    {index === 1 && <LocationOnIcon sx={{ padding: '3px' }} />}
+                    {index === 2 && <SmartphoneIcon sx={{ padding: '3px' }} />}
+                    {index === 3 && <LocalPhoneIcon sx={{ padding: '3px' }} />}
+                    {index === 4 && <MailIcon sx={{ padding: '3px' }} />}
+
+                    <ListItemText
+                      sx={{
+                        color:"primary.dark"
+                      }}
+                    >
+                      {item}
+                    </ListItemText>
+                  </ListItemIcon>
+                </>
+              )
+            })}
+          </List>
+        </Drawer>
+      </React.Fragment>
     </Container>
-  );
+  )
 
   const desktop = (
-    <Container maxWidth="100%" sx={{ backgroundColor: "#A81D34" }}>
-      <Toolbar>
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{
-            flexGrow: 1,
-            fontWeight: 540,
-            fontSize: ".9rem",
-          }}
-        >
-          {/* Associated by Al Ameen Transports */}
-        </Typography>
-
-        {pages.map((page, index) => (
+    <Container maxWidth='100%' sx={{ backgroundColor: "primary.dark"}}>
+      <Toolbar sx={{ display: 'flex',justifyContent:"right"}}>
+        {navMenu.map((page, index) => (
           <div key={index}>
             {index === 2 ? (
               <div>
                 <Button
-                  aria-controls="dropdown-menu"
-                  aria-haspopup="true"
+                  aria-controls='dropdown-menu'
+                  aria-haspopup='true'
                   onClick={handleClick}
-                  sx={{ color: "#ffffff", fontWeight: "bold" }}
+                  sx={{ color: "white.main", fontWeight: 'bold' }}
                 >
                   {page}
                 </Button>
                 <Menu
-                  id="dropdown-menu"
+                  id='dropdown-menu'
                   anchorEl={anchorEl}
                   open={Boolean(anchorEl)}
                   onClose={handleClose}
                   anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "center",
+                    vertical: 'bottom',
+                    horizontal: 'center'
                   }}
                   transformOrigin={{
-                    vertical: "top",
-                    horizontal: "center",
+                    vertical: 'top',
+                    horizontal: 'center'
                   }}
-                  sx={{ marginTop: "20px", marginLeft: "-70px" }}
+                  sx={{ translate: '-70px' }}
                 >
-                  <Box sx={{ width: "200px" }}>
+                  <Box sx={{ width: '200px' }}>
                     <MenuItem>Limousine</MenuItem>
                     <MenuItem>Passenger transport</MenuItem>
                     <MenuItem>Tour by luxury bus</MenuItem>
@@ -254,10 +214,11 @@ const MainNav = () => {
               <Typography
                 key={page}
                 sx={{
-                  margin: ".6rem",
-                  color: "white",
-                  fontWeight: "bold",
-                  fontSize: ".9rem",
+                  margin: '.6rem',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '.9rem',
+
                 }}
               >
                 {page}
@@ -267,8 +228,12 @@ const MainNav = () => {
         ))}
       </Toolbar>
     </Container>
-  );
-  return <AppBar position="static">{isMobile ? mobile : desktop} </AppBar>;
-};
+  )
+  return (
+    <AppBar position='static'>
+      {isMobile ? mobile : desktop} 
+    </AppBar>
+  )
+}
 
-export default MainNav;
+export default MainNav

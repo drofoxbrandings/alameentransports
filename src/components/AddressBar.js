@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "../assets/logo.svg";
 import {
   Box,
   Container,
@@ -9,7 +10,6 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import Image from "../assets/logo.svg";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
@@ -23,35 +23,32 @@ const AddressBar = () => {
       sx={{
         display: "flex",
         justifyContent: "space-between",
-        marginTop: "18px",
+        
       }}
     >
-      <Grid item xs={12} md={6} sx={{ img: { width: "200px" } }}>
-        <Box sx={{ marginLeft: "100px", marginTop: "-10px" }}>
+      <Grid item xs={12} md={6} sx={{ img: { width: {lg:"200px",md:"150px"} },paddingLeft:{lg:"60px",md:"30px"} }}>
           <img width={400} height={120} src={Image} alt="logo" />
-        </Box>
       </Grid>
       <Grid item xs={12} md={6}>
         <Box
-          gap={3}
           sx={{
             display: "flex",
-            marginTop: "15px",
             justifyContent: "right",
-            marginRight:"35px"
+            padding:"30px"
+            
           }}
         >
-          <Box sx={{ margin: "0px" }}>
+          <Box  >
             <Box
               sx={{
                 svg: { fontSize: "24px" },
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "center",
                 margin: ".5rem 0",
+                translate:"25px"
               }}
             >
-              <LocationOnIcon sx={{ color: "#A81D34" }} />
+              <LocationOnIcon sx={{ color: "primary.dark" }} />
               <Typography sx={{ fontSize: "16px", width: "150px" }}>
                 {" "}
                 Abu Dhabi,UAE
@@ -62,11 +59,11 @@ const AddressBar = () => {
                 svg: { fontSize: "24px" },
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "center",
+                translate:"25px",
                 margin: ".5rem 0",
               }}
             >
-              <LocationOnIcon sx={{ color: "#A81D34" }} />
+              <LocationOnIcon sx={{ color: "primary.dark" }} />
               <Typography sx={{ fontSize: "16px" }}> Dubai,UAE</Typography>
             </Box>
           </Box>
@@ -75,20 +72,20 @@ const AddressBar = () => {
             sx={{
               height: "auto",
               borderRightWidth: "2px",
-              borderColor: "#a81d34",
+              borderColor: "primary.dark",
             }}
           />
-          <Box sx={{ margin: "0px" }}>
+          <Box >
             <Box
               sx={{
                 svg: { fontSize: "24px" },
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "center",
+                translate:"5px",
                 margin: ".5rem 0",
               }}
             >
-              <SmartphoneIcon sx={{ color: "#A81D34" }} />
+              <SmartphoneIcon sx={{ color: "primary.dark" }} />
               <Typography
                 sx={{ fontSize: "16px", width:  "150px"  }}
               >
@@ -101,11 +98,11 @@ const AddressBar = () => {
                 svg: { fontSize: "24px" },
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "center",
+                translate:"5px",
                 margin: ".5rem 0",
               }}
             >
-              <LocalPhoneIcon sx={{ color: "#A81D34" }} />
+              <LocalPhoneIcon sx={{ color: "primary.dark" }} />
               <Typography sx={{ fontSize: "16px" }}>
                 {" "}
                 +971 2 555 0509
@@ -117,7 +114,9 @@ const AddressBar = () => {
             sx={{
               height: "auto",
               borderRightWidth: "2px",
-              borderColor: "#a81d34",
+              borderColor: "primary.dark",
+              translate:"-5px"
+              
             }}
           />
           <Box
@@ -127,9 +126,10 @@ const AddressBar = () => {
               flexDirection: "row",
               alignItems: "center",
               margin: ".5rem 0",
+              
             }}
           >
-            <MailIcon sx={{ color: "#A81D34" }} />
+            <MailIcon sx={{ color: "primary.dark" }} />
             <Typography sx={{ fontSize: "16px" }}>
               info@alameenlimousine.com
             </Typography>
@@ -140,7 +140,7 @@ const AddressBar = () => {
   );
 
   return (
-    <Container maxWidth="100%" sx={{ background: "#fff", color: "#A81D34" }}>
+    <Container maxWidth="100%" sx={{ background: "white.main", color: "primary.dark" }}>
       {isMobile ? null : desktopAddress}
     </Container>
   );
