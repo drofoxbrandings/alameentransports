@@ -57,7 +57,7 @@ const MainNav = ({ navMenu,address}) => {
         <IconButton edge='start' aria-label='menu' onClick={toggleDrawer}>
           <MenuIcon sx={{color:"secondary.main"}} />
         </IconButton>
-        <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+        <Typography variant='h6' component='div' sx={{ flexGrow:1 }}>
           <img src={Image} width={150} />
         </Typography>
       </Toolbar>

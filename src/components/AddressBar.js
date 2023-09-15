@@ -26,7 +26,7 @@ const AddressBar = () => {
         
       }}
     >
-      <Grid item xs={12} md={6} sx={{ img: { width: {lg:"200px",md:"150px"} },paddingLeft:{lg:"60px",md:"30px"} }}>
+      <Grid item xs={12} md={6} sx={{ img: { width: {lg:"200px",md:"150px"} },paddingLeft:{lg:"79px",md:"35px"} }}>
           <img width={400} height={120} src={Image} alt="logo" />
       </Grid>
       <Grid item xs={12} md={6}>
