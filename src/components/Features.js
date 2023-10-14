@@ -1,115 +1,47 @@
 import React from "react";
-import { Container, Typography, Grid, Box, useMediaQuery } from "@mui/material";
+import { Container, Typography, Grid } from "@mui/material";
 import styled from "@emotion/styled";
 import { useTheme } from "@mui/material/styles";
 
-const Features = ({ features, backgroundColor, boxShadow, margin }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
+const Features = ({ features}) => {
   const Image = styled("img")(({ theme }) => ({
     backgroundColor: "brown",
     width: "50px",
     borderRadius: "50px",
   }));
 
-  const mobile = (
-    <Box
-      sx={{ display: "flex", flexDirection: "column", justifyContent: "left" }}
-    >
-      <Typography
-        variant="h5"
-        sx={{
-          padding: { sm: "20px", xs: "20px" },
-          fontWeight: "bold",
-        }}
-      >
-        WHY CHOOSE US
-      </Typography>
+  const desktop = (
+    <Grid container justifyContent="space-around">
       <Grid
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          //   justifyContent: { lg: "space-evenly", md: "space-around" },
-        }}
+        item
+        lg={10}
+        md={11}
+        xl={11}
+        xs={12}
+        sx={{ padding: { lg: "2rem 0rem", md: "2rem 1rem", xl: "2rem 4rem" } }}
       >
+        <Typography variant="h4" sx={{ fontSize: "2rem", fontWeight: "bold" }}>
+          WHY CHOOSE US
+        </Typography>
+      </Grid>
+      <Grid container justifyContent="space-evenly">
         {features.map((item) => {
           return (
             <>
               <Grid
                 item
                 xs={12}
-                sm={4}
+                sm={12}
+                md={3}
+                lg={3}
                 sx={{
-                  padding: { sm: "20px", xs: "20px" },
-                  boxShadow: boxShadow,
-                  margin: margin,
-                  backgroundColor: backgroundColor,
-                }}
-              >
-                <Image src={item.image}></Image>
-
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: "bold",
-                    paddingBottom: "10px",
-                    paddingTop: "10px",
-                  }}
-                >
-                  {item.title}
-                </Typography>
-                <Typography
-                  sx={{ width: { xs: "350px", sm: "650px" }, fontSize: "17px" }}
-                >
-                  {item.description}
-                </Typography>
-              </Grid>
-            </>
-          );
-        })}
-      </Grid>
-    </Box>
-  );
-
-  const desktop = (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-        padding: { lg: "70px", md: "45px" },
-      }}
-    >
-      <Typography
-        variant="h4"
-        sx={{
-          paddingBottom: "30px",
-
-          fontWeight: "bold",
-          padding: { lg: "30px", md: "10px" },
-        }}
-      >
-        WHY CHOOSE US
-      </Typography>
-      <Grid
-        item
-        md={4}
-        lg={3}
-        sx={{
-          display: "flex",
-          justifyContent: { lg: "space-around", md: "space-around" },
-        }}
-      >
-        {features.map((item) => {
-          return (
-            <>
-              <Grid
-                sx={{
-                  padding: { lg: "30px", md: "10px" },
-                  boxShadow: boxShadow,
-                  margin: margin,
-                  backgroundColor: backgroundColor,
+                  boxShadow: 0,
+                  backgroundColor: "white.light",
+                  padding: {
+                    xs: "2rem 0rem",
+                    lg: "0rem 1.5rem",
+                    xl: "0rem 1.5rem",
+                  },
                 }}
               >
                 <Image src={item.image}></Image>
@@ -118,8 +50,7 @@ const Features = ({ features, backgroundColor, boxShadow, margin }) => {
                   variant="h6"
                   sx={{
                     fontWeight: "bold",
-                    paddingBottom: "10px",
-                    paddingTop: "10px",
+                    padding: "1rem 0rem",
                   }}
                 >
                   {item.title}
@@ -134,9 +65,9 @@ const Features = ({ features, backgroundColor, boxShadow, margin }) => {
           );
         })}
       </Grid>
-    </Box>
+    </Grid>
   );
-  return <Container maxWidth="100%">{isMobile ? mobile : desktop}</Container>;
+  return <Container maxWidth="100%">{desktop}</Container>;
 };
 
 export default Features;

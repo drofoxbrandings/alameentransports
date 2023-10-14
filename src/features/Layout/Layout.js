@@ -1,7 +1,6 @@
 import { Container } from "@mui/material";
 import React from "react";
 import AddressBar from "../../components/AddressBar";
-import Features from "../../components/Features";
 import MainNav from "../../components/MainNav";
 import BannerWithText from "../../components/BannerWithText";
 import footerBanner from "../../assets/bannerFooter.jpg";
@@ -13,11 +12,19 @@ import Footer from "../../components/Footer";
 import logo from "../../assets/logo.svg";
 
 const Layout = ({ children }) => {
+  
+    const navItems = [
+      { label: 'HOME', url: "/" },
+      { label: 'ABOUT US', url: "/about" },
+      { label: 'COMPANY', url: "/contact" },
+      { label: 'CONTACT US', url: "/contact" },
+    ];
+  
   return (
     <Container maxWidth="100%" sx={{ padding: "0 !important" }}>
       <AddressBar />
       <MainNav
-        navMenu={["HOME", "ABOUT US", "COMPANY", "CONTACT US"]}
+         const navItems ={navItems}
         address={[
           " Abu Dhabi, UAE",
           "Dubai,UAE",
