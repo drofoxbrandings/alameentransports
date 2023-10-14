@@ -3,33 +3,16 @@ import React from "react";
 import AddressBar from "../../components/AddressBar";
 import Features from "../../components/Features";
 import MainNav from "../../components/MainNav";
+import BannerWithText from "../../components/BannerWithText";
+import footerBanner from "../../assets/bannerFooter.jpg";
+import ClientsSection from "../../components/ClientsSection";
+import { clients } from "../../constants/clients";
+import { socialLinks } from "../../constants/socialLinks";
+import { footerLinks } from "../../constants/footerLinks";
+import Footer from "../../components/Footer";
+import logo from "../../assets/logo.svg";
 
 const Layout = ({ children }) => {
-  const features = [
-    {
-      title: "SAFETY",
-      image:
-        "https://alameentransportuae.com/static/media/safeIcon.b137857f.svg",
-      description: `Offering passangers peace of mind with meticulously trained and
-    experienced drivers,top-of-the-line vehicles equipped with advanced
-    safety features, and rigorous adherence to strict safety protocols.`,
-    },
-    {
-      title: "RELIABILITY",
-      image:
-        "https://alameentransportuae.com/static/media/reliableIcon.b32b4f53.svg",
-      description: `Ensuring punctuality,seamless coordination, and consistence 
-      highr-quality service,allowing clients to confidently rely on their 
-      chauffeur for all their transportation needs.`,
-    },
-    {
-      title: "AFFORDABLE",
-      image:
-        "https://alameentransportuae.com/static/media/afforIcon.690f2956.svg",
-      description: `With competitive pricing,offering value for money while
-       maintaining the highest standards of comfort,elegance,and personalised service.`,
-    },
-  ];
   return (
     <Container maxWidth="100%" sx={{ padding: "0 !important" }}>
       <AddressBar />
@@ -45,14 +28,26 @@ const Layout = ({ children }) => {
       />
 
       {children}
-      <Features
-        features={features}
-        backgroundColor={{ backgroundColor: "white.light" }}
-        boxShadow={{boxShadow:"0"}}
-        margin={{margin:"0"}}
-        imageWidth={{width:"50px"}}
-        imageBorderRadius={{borderRadius: "50px"}}
-        imageBackground={{backgroundColor:"brown"}}
+      <Container maxWidth="lg">
+        <ClientsSection clientImages={clients} />
+      </Container>
+
+      <BannerWithText
+        minHeight={350}
+        banner={footerBanner}
+        textOnly={true}
+        description1="It's not the destination matters, but moving the way with comfort.
+        Book a ride with us to feel the harmony"
+      />
+      <Footer
+        logo={logo}
+        address="P.O.BOX: 37693, Abu Dhabi, Dubai, UAE"
+        phone1="+971 2 555 0509"
+        phone2="+971 50 505 8724"
+        mail={"info@alameentransports.com"}
+        socialMedia={socialLinks}
+        copyright={"2023 - Al Ameen Transports L.L.C"}
+        links={footerLinks}
       />
     </Container>
   );

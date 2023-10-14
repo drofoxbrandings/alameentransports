@@ -1,7 +1,7 @@
 import { Box, Button, Grid, IconButton, Link, Typography } from "@mui/material";
 import React from "react";
 import TitleCard from "./Cards/TitleCard";
-import { titleCards } from "../constants/Constants";
+import { titleCards } from "../constants/TitleCards";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 const Hero = ({
   image,

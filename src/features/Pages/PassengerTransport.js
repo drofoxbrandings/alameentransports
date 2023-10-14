@@ -6,8 +6,11 @@ import { closeVideo, playVideo } from "../Slices/ButtonSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import { Box } from "@mui/material";
-import transportsVid from '../../assets/Transports.mp4'
+import { Box, Container, Grid, Typography } from "@mui/material";
+import transportsVid from "../../assets/Transports.mp4";
+import ServiceSection from "../../components/ServiceSection";
+import { passengerTransport } from "../../constants/passengerTransport";
+import FleetCard from "../../components/Cards/FleetCard";
 
 const PassengerTransport = () => {
   const dispatch = useDispatch();
@@ -27,9 +30,9 @@ const PassengerTransport = () => {
           allowOutsideClick: false,
           showConfirmButton: false,
           showCloseButton: true,
-          width: '70%',
+          width: "70%",
           margin: "0",
-          heightAuto: true
+          heightAuto: true,
         })
         .then((res) => {
           if (res.isDismissed) {
@@ -49,6 +52,40 @@ const PassengerTransport = () => {
         hasVideo={true}
         btnFn={() => dispatch(playVideo("transports"))}
       />
+      <Container maxWidth="lg">
+        {passengerTransport?.services?.map((item, index) => (
+          <ServiceSection
+            isTextleft={index % 2 === 0 ? false : true}
+            key={index}
+            description={item.description}
+            title={item.title}
+            image1={item.image1}
+            image2={item.image2}
+          />
+        ))}
+
+        <Grid container sx={{ margin: "2rem 0" }}>
+          <Grid item xs={12}>
+            <Typography
+              variant="h4"
+              sx={{ textTransform: "uppercase", marginBottom: "1rem" }}
+            >
+              Fleet
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid container spacing={2}>
+          {passengerTransport?.fleet?.map((item, idx) => (
+            <Grid item xs={12} md={4} key={idx}>
+              <FleetCard
+                image={item.image}
+                title={item.title}
+                rating={item.rating}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </Layout>
   );
 };
