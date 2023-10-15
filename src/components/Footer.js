@@ -91,11 +91,8 @@ const Footer = ({
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930362.092619181!2d53.87788131249998!3d24.373408099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e47fb280f01a1%3A0x2ef6250379469584!2sAAT%20Transport%20%26%20Limousine%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1697274990669!5m2!1sen!2sae"
             width="100%"
             height="75%"
-            frameBorder={0}
-            allowfullscreen=""
             loading="lazy"
             style={{ padding: "3rem 0" }}
-            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </Grid>
       </Grid>
