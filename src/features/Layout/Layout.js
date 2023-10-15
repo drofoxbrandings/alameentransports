@@ -1,6 +1,5 @@
-import { Container } from "@mui/material";
+import { Container, useMediaQuery } from "@mui/material";
 import React from "react";
-import AddressBar from "../../components/AddressBar";
 import MainNav from "../../components/MainNav";
 import BannerWithText from "../../components/BannerWithText";
 import footerBanner from "../../assets/bannerFooter.jpg";
@@ -10,21 +9,26 @@ import { socialLinks } from "../../constants/socialLinks";
 import { footerLinks } from "../../constants/footerLinks";
 import Footer from "../../components/Footer";
 import logo from "../../assets/logo.svg";
+import SectionBreak from "../../components/SectionBreak";
+import TopBar from "../../components/TopBar";
+import { useTheme } from "@emotion/react";
 
 const Layout = ({ children }) => {
-  
-    const navItems = [
-      { label: 'HOME', url: "/" },
-      { label: 'ABOUT US', url: "/about" },
-      { label: 'COMPANY', url: "/contact" },
-      { label: 'CONTACT US', url: "/contact" },
-    ];
-  
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const navItems = [
+    { label: "Home", url: "/" },
+    { label: "About Us", url: "/about" },
+    { label: "Company", url: "/contact" },
+    { label: "Contact Us", url: "/contact" },
+  ];
+
   return (
     <Container maxWidth="100%" sx={{ padding: "0 !important" }}>
-      <AddressBar />
+      {!matches && <TopBar logo={logo} />}
       <MainNav
-         const navItems ={navItems}
+        const
+        navItems={navItems}
         address={[
           " Abu Dhabi, UAE",
           "Dubai,UAE",
@@ -35,6 +39,7 @@ const Layout = ({ children }) => {
       />
 
       {children}
+      <SectionBreak />
       <Container maxWidth="lg">
         <ClientsSection clientImages={clients} />
       </Container>

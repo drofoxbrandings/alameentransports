@@ -3,8 +3,9 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, FormControl, MenuItem, TextField } from "@mui/material";
 import * as Yup from "yup";
+import { useSelector } from "react-redux";
 
-const Form = () => {
+const Form = ({ submit, company }) => {
   const schema = Yup.object().shape({
     department: Yup.string().required("*Required"),
     name: Yup.string()
@@ -32,17 +33,13 @@ const Form = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (values) => {
-    alert(JSON.stringify(values));
-  };
-
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(submit)}>
       <FormControl fullWidth margin="normal">
         <Controller
           name="department"
           control={control}
-          defaultValue=""
+          defaultValue={company}
           render={({ field, fieldState }) => (
             <TextField
               {...field}
@@ -51,13 +48,14 @@ const Form = () => {
               error={!!fieldState?.error}
               helperText={fieldState?.error?.message}
               select
+              value={company}
             >
               <MenuItem value="Limousine">Limousine</MenuItem>
-              <MenuItem value="Tour by Bus">Tour by Bus</MenuItem>
-              <MenuItem value="Passenger Transport">
-                Passenger Transport
+              <MenuItem value="Tour by Luxury Bus">Tour by Luxury Bus</MenuItem>
+              <MenuItem value="Passenger Transports">
+                Passenger Transports
               </MenuItem>
-              <MenuItem value="School Transport">School Transport</MenuItem>
+              <MenuItem value="School Transports">School Transports</MenuItem>
             </TextField>
           )}
         />

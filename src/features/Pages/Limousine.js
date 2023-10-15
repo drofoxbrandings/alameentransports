@@ -13,7 +13,7 @@ import { limousineService } from "../../constants/limousineService";
 import FleetCard from "../../components/Cards/FleetCard";
 
 const Limousine = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
   const videoSwal = withReactContent(Swal);
   const _rsVideoState = useSelector((state) => state.buttonAction.playId);
   useEffect(() => {
@@ -68,7 +68,7 @@ const Limousine = () => {
           <Grid item xs={12}>
             <Typography
               variant="h4"
-              sx={{ textTransform: "uppercase", marginBottom: "1rem" }}
+              sx={{ textTransform: "uppercase", marginBottom: "2rem" }}
             >
               Fleet
             </Typography>
@@ -76,8 +76,9 @@ const Limousine = () => {
         </Grid>
         <Grid container spacing={2}>
           {limousineService?.fleet?.map((item, idx) => (
-            <Grid item xs={12} md={4} key={idx}>
+            <Grid item xs={12} sm={6} md={4} key={idx}>
               <FleetCard
+                company={item.company}
                 image={item.image}
                 title={item.title}
                 rating={item.rating}

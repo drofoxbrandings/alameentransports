@@ -8,9 +8,12 @@ import {
 } from "@mui/material";
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
+import { useDispatch } from "react-redux";
+import { openForm } from "../../features/Slices/HomepageSlice";
 
-const FleetCard = ({ image, title, rating }) => {
+const FleetCard = ({ image, title, rating, company }) => {
   const ratingArr = new Array(rating).fill(<StarIcon color="primary" />);
+  const dispatch = useDispatch();
   return (
     <Card
       sx={{
@@ -48,7 +51,11 @@ const FleetCard = ({ image, title, rating }) => {
         </Box>
       </CardContent>
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-        <Button sx={{ borderRadius: 0 }} variant="contained">
+        <Button
+          sx={{ borderRadius: 0 }}
+          variant="contained"
+          onClick={() => dispatch(openForm(company))}
+        >
           Get a Quote
         </Button>
       </Box>

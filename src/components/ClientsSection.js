@@ -7,7 +7,7 @@ const ClientsSection = ({ clientImages }) => {
       <Grid item xs={12}>
         <Typography
           variant="h4"
-          sx={{ textTransform: "uppercase", marginBottom: "1rem" }}
+          sx={{ textTransform: "uppercase", marginBottom: "2rem" }}
         >
           Some happy customers
         </Typography>

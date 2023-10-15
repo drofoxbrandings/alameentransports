@@ -15,11 +15,13 @@ export const schoolTransports = {
   ],
   fleet: [
     {
+      company: 'School Transports',
       image: sbCoaster,
       title: "toyota coaster",
       rating: 4,
     },
     {
+      company: 'School Transports',
       image: sbAsokLeyland,
       title: "ashok leyland",
       rating: 4,

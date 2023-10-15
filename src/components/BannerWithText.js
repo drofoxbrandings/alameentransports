@@ -1,5 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { openForm } from "../features/Slices/HomepageSlice";
 
 const BannerWithText = ({
   textOnly,
@@ -9,6 +11,7 @@ const BannerWithText = ({
   banner,
   minHeight,
 }) => {
+  const dispatch = useDispatch();
   return (
     <Grid container>
       <Grid
@@ -19,7 +22,7 @@ const BannerWithText = ({
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: { md: "center center" },
-          minHeight: { md: `${minHeight}px`, },
+          minHeight: { md: `${minHeight}px` },
           objectFit: "cover",
           display: "flex",
           justifyContent: !!textOnly && "flex-end",
@@ -44,7 +47,12 @@ const BannerWithText = ({
             >
               {description1}
             </Typography>
-            <Button variant="outlined" size="large" sx={{ padding: "1rem" }}>
+            <Button
+              variant="outlined"
+              size="large"
+              sx={{ padding: "1rem" }}
+              onClick={() => dispatch(openForm(""))}
+            >
               Enquire now
             </Button>
           </Box>
@@ -59,7 +67,7 @@ const BannerWithText = ({
           >
             <Typography
               variant="h4"
-              sx={{ textTransform: "uppercase", marginBottom: "1rem" }}
+              sx={{ textTransform: "uppercase", marginBottom: "2rem" }}
               color="white.main"
             >
               {title}

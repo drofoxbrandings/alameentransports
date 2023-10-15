@@ -66,7 +66,10 @@ const ServiceSection = ({ isTextleft, description, title, image1, image2 }) => {
                 textTransform: "uppercase",
               }}
             >
-              <Typography variant="h5" sx={{ padding: "1rem" }}>
+              <Typography
+                variant="h5"
+                sx={{ padding: "1rem", fontSize: { xs: "1.3rem" } }}
+              >
                 {title}
               </Typography>
             </Box>

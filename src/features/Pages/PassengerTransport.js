@@ -68,7 +68,7 @@ const PassengerTransport = () => {
           <Grid item xs={12}>
             <Typography
               variant="h4"
-              sx={{ textTransform: "uppercase", marginBottom: "1rem" }}
+              sx={{ textTransform: "uppercase", marginBottom: "2rem" }}
             >
               Fleet
             </Typography>
@@ -76,8 +76,9 @@ const PassengerTransport = () => {
         </Grid>
         <Grid container spacing={2}>
           {passengerTransport?.fleet?.map((item, idx) => (
-            <Grid item xs={12} md={4} key={idx}>
+            <Grid item xs={12} sm={6} md={4} key={idx}>
               <FleetCard
+              company={item.company}
                 image={item.image}
                 title={item.title}
                 rating={item.rating}

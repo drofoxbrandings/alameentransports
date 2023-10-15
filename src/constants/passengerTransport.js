@@ -35,21 +35,25 @@ export const passengerTransport = {
   ],
   fleet: [
     {
+      company: 'Passenger Transports',
       image: toyoyaHiace,
       title: "toyota hiace",
       rating: 4,
     },
     {
+      company: 'Passenger Transports',
       image: mitsubishiRosa,
       title: "mitsubishi rosa",
       rating: 4,
     },
     {
+      company: 'Passenger Transports',
       image: toyotaCoaster,
       title: "toyota coaster",
       rating: 4,
     },
     {
+      company: 'Passenger Transports',
       image: asokLeyland,
       title: "ashok leyland",
       rating: 4,

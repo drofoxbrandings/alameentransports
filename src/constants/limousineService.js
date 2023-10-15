@@ -52,61 +52,73 @@ export const limousineService = {
   ],
   fleet: [
     {
+      company: "Limousine",
       image: mercedesSClass,
       title: "mercedes s class",
       rating: 4,
     },
     {
+      company: "Limousine",
       image: rollsroyce,
       title: "Rolls royce",
       rating: 5,
     },
     {
+      company: "Limousine",
       image: bmw7series,
       title: "bmw 7 series",
       rating: 4,
     },
     {
+      company: "Limousine",
       image: bmw5series,
       title: "bmw 5 series",
       rating: 3,
     },
     {
+      company: "Limousine",
       image: teslaY,
       title: "Tesla y",
       rating: 4,
     },
     {
+      company: "Limousine",
       image: lexuses300,
       title: "Lexus es 300",
       rating: 4,
     },
     {
+      company: "Limousine",
       image: mercedesvClass,
       title: "mercedes v class",
       rating: 4,
     },
     {
+      company: "Limousine",
       image: gmcYukonXl,
       title: "gmc yukon xl",
       rating: 4,
     },
     {
+      company: "Limousine",
       image: kiaCarnival,
       title: "kia carnival",
       rating: 4,
     },
     {
+      company: "Limousine",
       image: chevroletTraverse,
       title: "chevrolet traverse",
       rating: 4,
     },
     {
+      company: "Limousine",
       image: toyotaPrevia,
       title: "toyota previa",
       rating: 4,
     },
     {
+      company: "Limousine",
       image: toyotaHighlander,
       title: "toyota highlander",
       rating: 4,
