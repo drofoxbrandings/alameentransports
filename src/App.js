@@ -12,11 +12,12 @@ import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
 import Form from "./features/Pages/Form";
 import { Box } from "@mui/material";
+import { createStyles, makeStyles } from "@mui/styles";
 import { closeForm } from "./features/Slices/HomepageSlice";
 
 function App() {
-  const popUpFormState = useSelector((state) => state.homepage.showForm);  
-  const company = useSelector((state) => state.homepage.companyVal)
+  const popUpFormState = useSelector((state) => state.homepage.showForm);
+  const company = useSelector((state) => state.homepage.companyVal);
   const alertForm = withReactContent(Swal);
   const dispatch = useDispatch();
   const submitFn = (values) => {
@@ -28,7 +29,7 @@ function App() {
         .fire({
           html: (
             <Box sx={{ padding: "1rem", marginTop: "2rem", textAlign: "left" }}>
-              <Form submit={submitFn} company={company}/>
+              <Form submit={submitFn} company={company} />
             </Box>
           ),
           showConfirmButton: false,

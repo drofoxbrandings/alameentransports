@@ -128,7 +128,15 @@ const Form = ({ submit, company }) => {
         />
       </FormControl>
       <FormControl fullWidth margin="normal">
-        <Button color="primary" variant="contained" type="submit">
+        <Button
+          color="primary"
+          variant="contained"
+          type="submit"
+          sx={{
+            backgroundColor: "#C53A50",
+            "&:hover": { backgroundColor: "#89071C" },
+          }}
+        >
           Enquire now
         </Button>
       </FormControl>

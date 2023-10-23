@@ -15,7 +15,7 @@ import EmailIcon from "@mui/icons-material/Email";
 
 const TopBar = ({ logo }) => {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
       <Grid container sx={{ justifyContent: "space-between" }}>
         <Grid item xs={6} sm={4} md={2}>
           <img width="100%" src={logo} alt="Al Ameen transports" />
@@ -67,13 +67,13 @@ const TopBar = ({ logo }) => {
               <ListItemIcon sx={{ color: "primary.main" }}>
                 <LocalPhoneIcon />
               </ListItemIcon>
-              <ListItemText>+971 50 505 8724</ListItemText>
+              <ListItemText>+971 2 555 0509</ListItemText>
             </ListItem>
             <ListItem sx={{ color: "primary.main" }}>
               <ListItemIcon sx={{ color: "primary.main" }}>
                 <LocalPhoneIcon />
               </ListItemIcon>
-              <ListItemText>+971 2 555 0509</ListItemText>
+              <ListItemText>+971 4 884 7003</ListItemText>
             </ListItem>
           </Box>
           <Divider
@@ -92,7 +92,7 @@ const TopBar = ({ logo }) => {
               <ListItemIcon sx={{ color: "primary.main" }}>
                 <EmailIcon />
               </ListItemIcon>
-              <ListItemText>info@alameenlimousine.com</ListItemText>
+              <ListItemText>info@alameentransportsuae.com</ListItemText>
             </ListItem>
           </Box>
         </Grid>

@@ -29,7 +29,7 @@ const Hero = ({
               sm: "flex-start",
               md: "space-around",
             },
-            alignItems: "flex-end",
+            alignItems: "center",
           }}
         >
           <Grid
@@ -64,7 +64,7 @@ const Hero = ({
               variant="outlined"
               color="primary"
               size="large"
-              sx={{ margin: ".5rem 0", padding: "1rem" }}
+              sx={{ margin: "1.5rem 0", padding: "1rem" }}
               onClick={btnFn}
             >
               {btnLabel}

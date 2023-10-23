@@ -12,8 +12,8 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#C53A50",
-      light: '#E36478', 
-      dark: '#89071C'
+      light: "#E36478",
+      dark: "#89071C",
     },
     secondary: {
       main: "#000",
@@ -21,11 +21,14 @@ const theme = createTheme({
     },
     white: {
       main: "#ffffff",
-      dark: '#c8c8c8'
+      dark: "#c8c8c8",
     },
     error: {
       main: "#d32f2f",
     },
+  },
+  typography: {
+    fontFamily: 'Inter, sans-serif',
   },
 });
 
