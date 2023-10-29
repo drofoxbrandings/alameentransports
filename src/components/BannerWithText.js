@@ -60,7 +60,7 @@ const BannerWithText = ({
           <Container
             sx={{
               backgroundColor: "primary.main",
-              margin: { xs: "6rem 2rem", md: "0 12rem" },
+              margin: { xs: "6rem 2rem", md: "0 9%" },
               padding: "2rem",
               maxWidth: { xs: "100%", md: "40% ", lg: "23%" },
             }}
