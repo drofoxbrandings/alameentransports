@@ -16,7 +16,7 @@ export const tourByBus = {
       description:
         "Explore the dazzling wonders of the United Arab Emirates as our expert chauffeurs lead you through this captivating destination. From the gleaming skyscrapers of Dubai to the cultural heritage of Abu Dhabi, and from the pristine beaches of Fujairah to the majestic deserts of Sharjah, our thoughtfully curated tour showcases the very best of the UAE. Sit back and indulge in the comfort of our luxurious vehicles, where every moment is dedicated to your enjoyment and relaxation.",
       image1: TourInUaeImage1,
-      image2: TourInUaeImage2,
+      image2: TourInUaeImage2, 
     },
     {
       title: "Tour in Oman",
