@@ -2,8 +2,8 @@ import staffTransportImage1 from "../assets/staffTransport__passengerTransport_1
 import staffTransportImage2 from "../assets/staffTransport__passengerTransport_2.jpg";
 import transfersimage1 from "../assets/transfers_passengerTransport_1.jpg";
 import transfersimage2 from "../assets/transfers_passengerTransport_2.jpg";
-import sightSeeingImage1 from "../assets/sightSeeing_passengerTransports_1.jpg";
-import sightSeeingImage2 from "../assets/sightSeeing_passengerTransports_2.jpg";
+import sightSeeingImage1 from "../assets/sightSeeing_passengertransport_1.jpg";
+import sightSeeingImage2 from "../assets/sightSeeing_passengertransport_2.jpg";
 import toyoyaHiace from "../assets/toyoyaHiace.png";
 import mitsubishiRosa from "../assets/mitsubishiRosa.png";
 import toyotaCoaster from "../assets/toyotaCoaster.png";
@@ -35,25 +35,25 @@ export const passengerTransport = {
   ],
   fleet: [
     {
-      company: 'Passenger Transports',
+      company: 'Passenger transport',
       image: toyoyaHiace,
       title: "toyota hiace",
       rating: 4,
     },
     {
-      company: 'Passenger Transports',
+      company: 'Passenger transport',
       image: mitsubishiRosa,
       title: "mitsubishi rosa",
       rating: 4,
     },
     {
-      company: 'Passenger Transports',
+      company: 'Passenger transport',
       image: toyotaCoaster,
       title: "toyota coaster",
       rating: 4,
     },
     {
-      company: 'Passenger Transports',
+      company: 'Passenger transport',
       image: asokLeyland,
       title: "ashok leyland",
       rating: 4,

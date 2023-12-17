@@ -15,12 +15,12 @@ export const titleCards = [
     link: "/tour-by-luxury-bus",
   },
   {
-    title: "Passenger transports",
+    title: "Passenger transport",
     image: passengerTitleImage,
     link: "/passenger-transportation",
   },
   {
-    title: "School transports",
+    title: "School transport",
     image: schoolTitleImage,
     link: "/school-transportation",
   },

@@ -143,7 +143,7 @@ const MainNav = ({ navItems, address }) => {
                                 underline="none"
                                 variant="body1"
                               >
-                                <MenuItem>Passenger Transports</MenuItem>
+                                <MenuItem>Passenger Transport</MenuItem>
                               </Link>
                               <Link
                                 href="/school-transportation"
@@ -151,7 +151,7 @@ const MainNav = ({ navItems, address }) => {
                                 underline="none"
                                 variant="body1"
                               >
-                                <MenuItem>School Transports</MenuItem>
+                                <MenuItem>School Transport</MenuItem>
                               </Link>
                             </AccordionDetails>
                           </Accordion>
@@ -285,7 +285,7 @@ const MainNav = ({ navItems, address }) => {
                             margin: "2rem 0",
                           }}
                         >
-                          <MenuItem>Passenger Transports</MenuItem>
+                          <MenuItem>Passenger Transport</MenuItem>
                         </Link>
                         <Link
                           href={"/school-transportation"}
@@ -297,7 +297,7 @@ const MainNav = ({ navItems, address }) => {
                           }}
                         >
                           {" "}
-                          <MenuItem>School Transports</MenuItem>
+                          <MenuItem>School Transport</MenuItem>
                         </Link>
                       </Box>
                     </Menu>

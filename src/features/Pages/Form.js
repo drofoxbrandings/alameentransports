@@ -52,10 +52,10 @@ const Form = ({ submit, company }) => {
             >
               <MenuItem value="Limousine">Limousine</MenuItem>
               <MenuItem value="Tour by Luxury Bus">Tour by Luxury Bus</MenuItem>
-              <MenuItem value="Passenger Transports">
-                Passenger Transports
+              <MenuItem value="Passenger transport">
+                Passenger transport
               </MenuItem>
-              <MenuItem value="School Transports">School Transports</MenuItem>
+              <MenuItem value="School transport">School transport</MenuItem>
             </TextField>
           )}
         />

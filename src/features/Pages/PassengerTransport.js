@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { Box, Container, Grid, Typography } from "@mui/material";
-import transportsVid from "../../assets/Transports.mp4";
+import transportVid from "../../assets/transport.mp4";
 import ServiceSection from "../../components/ServiceSection";
 import { passengerTransport } from "../../constants/passengerTransport";
 import FleetCard from "../../components/Cards/FleetCard";
@@ -17,13 +17,13 @@ const PassengerTransport = () => {
   const videoSwal = withReactContent(Swal);
   const _rsVideoState = useSelector((state) => state.buttonAction.playId);
   useEffect(() => {
-    if (_rsVideoState !== "" && _rsVideoState === "transports") {
+    if (_rsVideoState !== "" && _rsVideoState === "transport") {
       videoSwal
         .fire({
           html: (
             <Box>
               <video width="100%" controls autoPlay>
-                <source src={transportsVid} type="video/mp4"></source>
+                <source src={transportVid} type="video/mp4"></source>
               </video>
             </Box>
           ),
@@ -47,10 +47,10 @@ const PassengerTransport = () => {
         image={heroImg}
         altTxt="Passenger transportation in UAE"
         isFullWidthHero={false}
-        title="Passenger transports"
+        title="Passenger transport"
         description="Whether for daily commuting, travel, or special events, we plays a crucial role in connecting communities, and cities, making it possible for individuals to access work, education, leisure, and other essential activities. With a focus on safety, convenience, and efficiency, our services ensure that people can reach their destinations comfortably and on time."
         hasVideo={true}
-        btnFn={() => dispatch(playVideo("transports"))}
+        btnFn={() => dispatch(playVideo("transport"))}
       />
       <Container maxWidth="lg">
         {passengerTransport?.services?.map((item, index) => (

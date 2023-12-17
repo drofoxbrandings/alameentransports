@@ -51,7 +51,7 @@ export const featuredCars = [
       vName: "Hiace",
       imageSide: "left",
       model: "2022",
-      company: "Passenger transports",
+      company: "Passenger transport",
       rating: [1, 2, 3],
       images: [
         {

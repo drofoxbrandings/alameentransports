@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           "Dubai,UAE",
           "+971 2 555 0509",
           " +971 4 884 7003",
-          "info@alameentransportsuae.com",
+          "info@alameentransportuae.com",
         ]}
       />
 
@@ -56,9 +56,9 @@ const Layout = ({ children }) => {
         address="P.O.BOX: 37693, Abu Dhabi, Dubai, UAE"
         phone1="+971 2 555 0509"
         phone2="+971 4 884 7003"
-        mail={"info@alameentransportsuae.com"}
+        mail={"info@alameentransportuae.com"}
         socialMedia={socialLinks}
-        copyright={"2023 - Al Ameen Transports L.L.C"}
+        copyright={"2023 - Al Ameen transport L.L.C"}
         links={footerLinks}
       />
     </Container>

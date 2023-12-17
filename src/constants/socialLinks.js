@@ -4,14 +4,14 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export const socialLinks = [
   {
     icon: <FacebookIcon />,
-    link: "https://www.facbook.com/alameentransports",
+    link: "https://www.facbook.com/alameentransport",
   },
   {
     icon: <InstagramIcon />,
-    link: "https://www.instagram.com/alameentransports",
+    link: "https://www.instagram.com/alameentransport",
   },
   {
     icon: <LinkedInIcon />,
-    link: "https://www.linkedin.com/alameentransports",
+    link: "https://www.linkedin.com/alameentransport",
   },
 ];

@@ -16,7 +16,7 @@ export const footerLinks = [
       link: "/tour-by-luxury-bus",
     },
     {
-      label: "School Transports",
+      label: "School transport",
       link: "/school-transportation",
     },
     {
