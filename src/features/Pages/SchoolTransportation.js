@@ -4,7 +4,7 @@ import heroImg from "../../assets/heroSchoolTransportation.jpg";
 import Hero from "../../components/Hero";
 import { Container, Grid, Typography } from "@mui/material";
 import ServiceSection from "../../components/ServiceSection";
-import { schooltransport } from "../../constants/schooltransport";
+import { schooltransport } from "../../constants/schoolTransport";
 import FleetCard from "../../components/Cards/FleetCard";
 
 const SchoolTransportation = () => {
@@ -14,7 +14,7 @@ const SchoolTransportation = () => {
         image={heroImg}
         altTxt="School transportation in UAE"
         isFullWidthHero={false}
-        title="School transport"
+        title="School transport" 
         description="Experience safe and reliable school transportation services with us. We prioritize the well-being of students by offering secure and comfortable rides to and from school. Our team of professional and experienced chauffeurs ensures timely pickups and drop-offs, providing parents and schools with peace of mind."
       />
       <Container maxWidth="lg">
