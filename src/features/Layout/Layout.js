@@ -8,7 +8,7 @@ import { clients } from "../../constants/clients";
 import { socialLinks } from "../../constants/socialLinks";
 import { footerLinks } from "../../constants/footerLinks";
 import Footer from "../../components/Footer";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 import SectionBreak from "../../components/SectionBreak";
 import TopBar from "../../components/TopBar";
 import { useTheme } from "@emotion/react";

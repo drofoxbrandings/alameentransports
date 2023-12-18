@@ -2,7 +2,7 @@
 import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Image from "../assets/logo.svg";
+import Image from "../assets/logo.png";
 import {
   AppBar,
   Drawer,
