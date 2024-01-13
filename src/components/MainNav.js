@@ -176,7 +176,7 @@ const MainNav = ({ navItems, address }) => {
             <Divider sx={{ margin: "1rem 0" }} />
             <Grid item xs={12}>
               {address.map((item, index) => (
-                <ListItem>
+                <ListItem key={index}>
                   {index === 0 && (
                     <ListItemIcon sx={{ color: "primary.main" }}>
                       <LocationOnIcon />

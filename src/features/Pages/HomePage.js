@@ -36,7 +36,7 @@ const HomePage = () => {
             </Typography>
           </Grid>
           {features?.map((item, index) => (
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={4} key={index}>
               <Features
                 key={index}
                 image={item.image}

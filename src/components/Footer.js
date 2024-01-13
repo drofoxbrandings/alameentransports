@@ -93,7 +93,7 @@ const Footer = ({
               width="400"
               height="150"
               style={{ padding: "2rem 0 0 0", border: "none" }}
-              allowfullscreen
+              allowFullScreen
               loading="lazy"
             ></iframe>
           </Box>
@@ -103,7 +103,7 @@ const Footer = ({
               width="400"
               height="150"
               style={{ padding: "1rem 0 0 0", border: "none" }}
-              allowfullscreen
+              allowFullScreen
               loading="lazy"
             ></iframe>
           </Box>

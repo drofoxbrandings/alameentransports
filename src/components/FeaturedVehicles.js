@@ -13,6 +13,8 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import { useTheme } from "@emotion/react";
 import StarIcon from "@mui/icons-material/Star";
+import { useDispatch } from "react-redux";
+import { openForm } from "../features/Slices/HomepageSlice";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const FeaturedVehicles = ({
@@ -26,6 +28,7 @@ const FeaturedVehicles = ({
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const maxSteps = vehiclesList.length;
+  const dispatch = useDispatch();
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -66,7 +69,7 @@ const FeaturedVehicles = ({
                     width: "100%",
                     maxHeight: "350px",
                     objectFit: "contain",
-                    borderRadius: '.5rem'
+                    borderRadius: ".5rem",
                   }}
                   src={step.imgPath}
                   alt={step.label}
@@ -117,7 +120,7 @@ const FeaturedVehicles = ({
             md: imageSide === "right" ? "right" : "left",
             xs: "center",
           },
-          margin: '0 2rem'
+          margin: "0 2rem",
         }}
       >
         <Typography
@@ -152,7 +155,11 @@ const FeaturedVehicles = ({
           ))}
         </Typography>
 
-        <Button sx={{ marginTop: "4rem", padding: "1rem" }} variant="outlined">
+        <Button
+          sx={{ marginTop: "4rem", padding: "1rem" }}
+          variant="outlined"
+          onClick={() => dispatch(openForm(""))}
+        >
           Enquire now
         </Button>
       </Grid>
