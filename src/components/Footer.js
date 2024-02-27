@@ -28,7 +28,7 @@ const Footer = ({
   }, [socialMedia]);
 
   return (
-    <Container maxWidth="lg" sx={{padding: '3rem 0'}}>
+    <Container maxWidth="lg" sx={{padding: '3rem 1rem'}}>
       <Grid container>
         <Grid item xs={12} md={8}>
           <Grid container spacing={2}>

@@ -20,6 +20,10 @@ export const footerLinks = [
       link: "/school-transportation",
     },
     {
+      label: "Garage",
+      link: "/garage",
+    },
+    {
       label: "Contact us",
       link: "/contact",
     },

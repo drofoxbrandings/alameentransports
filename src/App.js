@@ -14,6 +14,7 @@ import Form from "./features/Pages/Form";
 import { Box } from "@mui/material";
 import { createStyles, makeStyles } from "@mui/styles";
 import { closeForm } from "./features/Slices/HomepageSlice";
+import Garage from "./features/Pages/Garage";
 
 function App() {
   const popUpFormState = useSelector((state) => state.homepage.showForm);
@@ -58,6 +59,11 @@ function App() {
         exact
         path="/school-transportation"
         element={<SchoolTransportation />}
+      />
+      <Route
+        exact
+        path="/garage"
+        element={<Garage />}
       />
     </Routes>
   );

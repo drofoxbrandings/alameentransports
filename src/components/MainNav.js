@@ -153,6 +153,14 @@ const MainNav = ({ navItems, address }) => {
                               >
                                 <MenuItem>School Transport</MenuItem>
                               </Link>
+                              <Link
+                                href="/garage"
+                                color="secondary.main"
+                                underline="none"
+                                variant="body1"
+                              >
+                                <MenuItem>Garage</MenuItem>
+                              </Link>
                             </AccordionDetails>
                           </Accordion>
                         ) : (
@@ -262,7 +270,17 @@ const MainNav = ({ navItems, address }) => {
                             margin: "2rem 0",
                           }}
                         >
-                          <MenuItem>Limousine</MenuItem>
+                          <MenuItem
+                            sx={{
+                              padding: "1rem",
+                              "&:hover": {
+                                backgroundColor: "primary.main",
+                                color: "#fff",
+                              },
+                            }}
+                          >
+                            Limousine
+                          </MenuItem>
                         </Link>
 
                         <Link
@@ -274,7 +292,17 @@ const MainNav = ({ navItems, address }) => {
                             margin: "2rem 0",
                           }}
                         >
-                          <MenuItem>Tour by Luxury Bus</MenuItem>
+                          <MenuItem
+                            sx={{
+                              padding: "1rem",
+                              "&:hover": {
+                                backgroundColor: "primary.main",
+                                color: "#fff",
+                              },
+                            }}
+                          >
+                            Tour by Luxury Bus
+                          </MenuItem>
                         </Link>
                         <Link
                           href={"/passenger-transportation"}
@@ -285,7 +313,17 @@ const MainNav = ({ navItems, address }) => {
                             margin: "2rem 0",
                           }}
                         >
-                          <MenuItem>Passenger Transport</MenuItem>
+                          <MenuItem
+                            sx={{
+                              padding: "1rem",
+                              "&:hover": {
+                                backgroundColor: "primary.main",
+                                color: "#fff",
+                              },
+                            }}
+                          >
+                            Passenger Transport
+                          </MenuItem>
                         </Link>
                         <Link
                           href={"/school-transportation"}
@@ -297,7 +335,38 @@ const MainNav = ({ navItems, address }) => {
                           }}
                         >
                           {" "}
-                          <MenuItem>School Transport</MenuItem>
+                          <MenuItem
+                            sx={{
+                              padding: "1rem",
+                              "&:hover": {
+                                backgroundColor: "primary.main",
+                                color: "#fff",
+                              },
+                            }}
+                          >
+                            School Transport
+                          </MenuItem>
+                        </Link>
+                        <Link
+                          href={"/garage"}
+                          color="secondary.main"
+                          underline="none"
+                          variant="body1"
+                          sx={{
+                            margin: "2rem 0",
+                          }}
+                        >
+                          <MenuItem
+                            sx={{
+                              padding: "1rem",
+                              "&:hover": {
+                                backgroundColor: "primary.main",
+                                color: "#fff",
+                              },
+                            }}
+                          >
+                            Garage
+                          </MenuItem>
                         </Link>
                       </Box>
                     </Menu>
