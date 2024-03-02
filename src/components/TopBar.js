@@ -33,21 +33,21 @@ const TopBar = ({ logo }) => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "space-between",
+              justifyContent: "space-around",
               alignItems: "start",
             }}
           >
-            <ListItem sx={{ color: "primary.main" }}>
-              <ListItemIcon sx={{ color: "primary.main" }}>
+            <ListItem sx={{ color: "primary.main", padding: '.25rem .5rem' }}>
+              <ListItemIcon sx={{ color: "primary.main", justifyContent: 'center' }}>
                 <LocationOnIcon />
               </ListItemIcon>
               <ListItemText>Abu Dhabi, UAE</ListItemText>
             </ListItem>
-            <ListItem sx={{ color: "primary.main" }}>
-              <ListItemIcon sx={{ color: "primary.main" }}>
-                <LocationOnIcon />
+            <ListItem sx={{ color: "primary.main", padding: '.25rem .5rem' }}>
+              <ListItemIcon sx={{ color: "primary.main", justifyContent: 'center' }}>
+                <LocalPhoneIcon />
               </ListItemIcon>
-              <ListItemText>Dubai, UAE</ListItemText>
+              <ListItemText primary="+971 2 555 0509"/>
             </ListItem>
           </Box>
 
@@ -59,18 +59,18 @@ const TopBar = ({ logo }) => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "space-between",
+              justifyContent: "space-around",
               alignItems: "start",
             }}
           >
-            <ListItem sx={{ color: "primary.main" }}>
-              <ListItemIcon sx={{ color: "primary.main" }}>
-                <LocalPhoneIcon />
+            <ListItem sx={{ color: "primary.main", padding: '.25rem .5rem' }}>
+              <ListItemIcon sx={{ color: "primary.main", justifyContent: 'center' }}>
+                <LocationOnIcon />
               </ListItemIcon>
-              <ListItemText>+971 2 555 0509</ListItemText>
+              <ListItemText>Dubai, UAE</ListItemText>
             </ListItem>
-            <ListItem sx={{ color: "primary.main" }}>
-              <ListItemIcon sx={{ color: "primary.main" }}>
+            <ListItem sx={{ color: "primary.main", padding: '.25rem .5rem' }}>
+              <ListItemIcon sx={{ color: "primary.main", justifyContent: 'center' }}>
                 <LocalPhoneIcon />
               </ListItemIcon>
               <ListItemText>+971 4 884 7003</ListItemText>
@@ -88,8 +88,8 @@ const TopBar = ({ logo }) => {
               alignItems: "start",
             }}
           >
-            <ListItem sx={{ color: "primary.main" }}>
-              <ListItemIcon sx={{ color: "primary.main" }}>
+            <ListItem sx={{ color: "primary.main", padding: '.25rem .5rem' }}>
+              <ListItemIcon sx={{ color: "primary.main", justifyContent: 'center' }}>
                 <EmailIcon />
               </ListItemIcon>
               <ListItemText>info@alameentransportuae.com</ListItemText>
