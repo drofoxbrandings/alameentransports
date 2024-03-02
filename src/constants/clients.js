@@ -1,22 +1,32 @@
-import adnecImage from "../assets/group-logo.png";
-import leMeridianImage from "../assets/Le_Meridien-logo-C7423CFC49-seeklogo.com.png";
-import adnocImage from "../assets/ADNOC-Logo.png";
-import britishSchoolImage from "../assets/britishSchool.png";
+import Two454 from "../assets/twofourLogo.jpeg";
+import abuDhabiMedia from "../assets/abudhabiMediaLogo.svg";
+import accenture from "../assets/accenture-logo.png";
+import arabianAdventure from "../assets/arabianAdvLogo.png";
+import asianSchool from "../assets/asianschool.jpg";
+import intlIndianSchool from "../assets/intlIndianSchool.png";
 export const clients = [
   {
-    label: "adnec",
-    image: adnecImage,
+    label: "Two454",
+    image: Two454,
   },
   {
-    label: "le meridian",
-    image: leMeridianImage,
+    label: "abuDhabiMedia",
+    image: abuDhabiMedia,
   },
   {
-    label: "adnoc",
-    image: adnocImage,
+    label: "accenture",
+    image: accenture,
   },
   {
-    label: "the british school",
-    image: britishSchoolImage,
+    label: "arabianAdventure",
+    image: arabianAdventure,
+  },
+  {
+    label: "asianSchool",
+    image: asianSchool,
+  },
+  {
+    label: "intlIndianSchool",
+    image: intlIndianSchool,
   },
 ];

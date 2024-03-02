@@ -18,7 +18,7 @@ const TopBar = ({ logo }) => {
     <Container maxWidth="xl">
       <Grid container sx={{ justifyContent: "space-between" }}>
         <Grid item xs={6} sm={4} md={2}>
-          <img width="100%" src={logo} alt="Al Ameen transport" />
+          <img width="70%" src={logo} alt="Al Ameen transport" />
         </Grid>
         <Grid
           item

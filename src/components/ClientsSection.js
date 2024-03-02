@@ -17,7 +17,7 @@ const ClientsSection = ({ clientImages }) => {
           key={index}
           item
           xs={6}
-          md={3}
+          md={2}
           sx={{
             display: "flex",
             justifyContent: "space-between",

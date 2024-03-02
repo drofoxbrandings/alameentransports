@@ -8,7 +8,9 @@ import { clients } from "../../constants/clients";
 import { socialLinks } from "../../constants/socialLinks";
 import { footerLinks } from "../../constants/footerLinks";
 import Footer from "../../components/Footer";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+import logo from "../../assets/logogroup.png";
+import logoFooter from "../../assets/logoGroup.svg";
 import SectionBreak from "../../components/SectionBreak";
 import TopBar from "../../components/TopBar";
 import { useTheme } from "@emotion/react";
@@ -52,7 +54,7 @@ const Layout = ({ children }) => {
         Book a ride with us to feel the harmony"
       />
       <Footer
-        logo={logo}
+        logo={logoFooter}
         address="P.O.BOX: 37693, Abu Dhabi, Dubai, UAE"
         phone1="+971 2 555 0509"
         phone2="+971 4 884 7003"
