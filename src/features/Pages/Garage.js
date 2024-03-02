@@ -5,13 +5,17 @@ import SectionBreak from "../../components/SectionBreak";
 import hero from "../../assets/motor.jpg";
 import GarageService from "../../components/GarageService";
 import { Box, Container, Grid } from "@mui/material";
+import mechanicService from "../../assets/mechanic.jpg";
+import electricalService from "../../assets/electrical.jpg";
+import acService from "../../assets/acservice.jpg";
+import tyreService from "../../assets/tyreservice.jpg";
+import paintService from "../../assets/paintservice.jpg";
 
 const Garage = () => {
   const garageServices = [
     {
       id: 1,
-      image:
-        "https://img.freepik.com/free-photo/muscular-car-service-worker-repairing-vehicle_146671-19605.jpg?t=st=1709013081~exp=1709016681~hmac=5f8b0400da5ba1195aecafa7b2265f5f30258d5e36df535a7db34ab19ecbe3a5&w=1380",
+      image: `${mechanicService}`,
       title: "Mechanic Service",
       subtitle: "",
       desc: "AAT Auto Garage provides expert vehicle maintenance, repair, and diagnostics. Our skilled mechanics resolve mechanical and electrical issues, ensuring top performance, safety, and longevity. With advanced tools and quality parts, we deliver reliable solutions for smooth-running vehicles trusted by drivers.",
@@ -25,8 +29,7 @@ const Garage = () => {
     },
     {
       id: 2,
-      image:
-        "https://img.freepik.com/free-photo/close-up-car-engine-repair-shop_23-2150376976.jpg?t=st=1709016237~exp=1709019837~hmac=144828aa4372cb25db7f8c769d1f54853bbd6a169775b9def983e6d0ec6c4d88&w=740",
+      image: `${electricalService}`,
       title: "Electrical Service",
       subtitle: "",
       desc: "We specialize in diagnosing and repairing vehicle electrical issues. Our skilled technicians use advanced tools to resolve problems with wiring, batteries, starters, alternators, and electronic components. With precision and reliability, we ensure your vehicle's electrical system operates efficiently and safely, keeping you confident on the road.",
@@ -42,8 +45,7 @@ const Garage = () => {
     },
     {
       id: 3,
-      image:
-        "https://img.freepik.com/free-photo/close-up-car-care-dusting_23-2149172884.jpg?t=st=1709021968~exp=1709025568~hmac=807b84c3116b1d958bc87944cf8b891a8a1abf587e95cd5d7b1d448152d4e765&w=1380",
+      image: `${acService}`,
       title: "AC Service",
       subtitle: "",
       desc: "We offers comprehensive solutions for all your vehicle's air conditioning needs. From refrigerant recharges to component replacements, we utilize advanced techniques and quality parts to keep your car's AC running efficiently. Trust us to provide timely and reliable service, keeping you comfortable on the road all year round.",
@@ -59,8 +61,7 @@ const Garage = () => {
     },
     {
       id: 4,
-      image:
-        "https://img.freepik.com/free-photo/muscular-man-is-fixing-car-s-wheel-with-special-tool-auto-service_613910-3825.jpg?t=st=1709022961~exp=1709026561~hmac=ee3deacc8c8bf43f4551c87200b5c46813f844c66f3a2e3723a317f63ea75e31&w=1380",
+      image: `${tyreService}`,
       title: "Tyre Service",
       subtitle: "",
       desc: "We offers expert solutions for all your tire needs. Our skilled technicians provide services such as tire inspection, repair, replacement, and alignment. With state-of-the-art equipment and quality products, we ensure your tires are in optimal condition for safety and performance on the road. ",
@@ -73,8 +74,7 @@ const Garage = () => {
     },
     {
       id: 5,
-      image:
-        "https://img.freepik.com/free-photo/car-detailing-concept-man-face-mask-with-orbital-polisher-repair-shop-polishing-orange-suv-car_627829-12608.jpg?t=st=1709024156~exp=1709027756~hmac=2c7edbcab3dc544917a23065f28cdf04437064e3048b4cbafd9a955faab38dea&w=1380",
+      image: `${paintService}`,
       title: "Body Paint & Dent",
       subtitle: "",
       desc: "Our expert technicians excel in repairing dents and scratches, and applying high-quality paint finishes to restore your vehicle's appearance. Using advanced techniques and premium materials, we ensure precise color matching and flawless results. Trust us to rejuvenate your vehicle's exterior, enhancing its beauty and value.",

@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   const navItems = [
     { label: "Home", url: "/" },
     { label: "About Us", url: "/about" },
-    { label: "Company", url: "/contact" },
+    { label: "Companies", url: "" },
     { label: "Contact Us", url: "/contact" },
   ];
 

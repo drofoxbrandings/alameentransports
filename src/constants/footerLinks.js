@@ -20,8 +20,8 @@ export const footerLinks = [
       link: "/school-transportation",
     },
     {
-      label: "Garage",
-      link: "/garage",
+      label: "Technical Center",
+      link: "/technical-center",
     },
     {
       label: "Contact us",

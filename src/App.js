@@ -62,7 +62,7 @@ function App() {
       />
       <Route
         exact
-        path="/garage"
+        path="/technical-center"
         element={<Garage />}
       />
     </Routes>
