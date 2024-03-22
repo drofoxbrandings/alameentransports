@@ -22,7 +22,16 @@ function App() {
   const alertForm = withReactContent(Swal);
   const dispatch = useDispatch();
   const submitFn = (values) => {
-    alert(JSON.stringify(values));
+    Swal.fire({
+      icon: "success",
+      title: "Thank you!!",
+      text: "We recieved your enquiry. One of our executives will contact you soon!!",
+      confirmButtonColor: "#C53A50",
+    }).then((res) => {
+      if (res.isConfirmed || res.isDismissed) {
+        window.location.reload();
+      }
+    });
   };
   useEffect(() => {
     !!popUpFormState &&
@@ -60,11 +69,7 @@ function App() {
         path="/school-transportation"
         element={<SchoolTransportation />}
       />
-      <Route
-        exact
-        path="/technical-center"
-        element={<Garage />}
-      />
+      <Route exact path="/technical-center" element={<Garage />} />
     </Routes>
   );
 }

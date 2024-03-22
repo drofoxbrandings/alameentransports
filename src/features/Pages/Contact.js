@@ -5,11 +5,21 @@ import Hero from "../../components/Hero";
 import { Card, CardContent, Container, Grid, Typography } from "@mui/material";
 import Form from "./Form";
 import SectionBreak from "../../components/SectionBreak";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const submitFn = (values) => {
-    alert(JSON.stringify(values))
-  }
+    Swal.fire({
+      icon: "success",
+      title: "Thank you!!",
+      text: "We recieved your enquiry. One of our executives will contact you soon!!",
+      confirmButtonColor: "#C53A50",
+    }).then((res) => {
+      if (res.isConfirmed || res.isDismissed) {
+        window.location.reload();
+      }
+    });
+  };
   return (
     <Layout>
       <Hero
@@ -29,7 +39,7 @@ const Contact = () => {
         <Grid container xs={12} md={8} sx={{ margin: "2rem 0" }}>
           <Card>
             <CardContent>
-              <Form submit={submitFn}/>
+              <Form submit={submitFn} />
             </CardContent>
           </Card>
         </Grid>

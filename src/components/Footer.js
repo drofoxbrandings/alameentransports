@@ -4,6 +4,7 @@ import {
   Divider,
   Grid,
   IconButton,
+  Link,
   List,
   ListItem,
   ListItemButton,
@@ -12,6 +13,7 @@ import {
 } from "@mui/material";
 import React, { useEffect } from "react";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Footer = ({
   logo,
@@ -23,12 +25,11 @@ const Footer = ({
   copyright,
   links,
 }) => {
-  useEffect(() => {
-    console.log(socialMedia);
-  }, [socialMedia]);
+  const navigate = useNavigate();
+
 
   return (
-    <Container maxWidth="lg" sx={{padding: '3rem 1rem'}}>
+    <Container maxWidth="lg" sx={{ padding: "3rem 1rem" }}>
       <Grid container>
         <Grid item xs={12} md={8}>
           <Grid container spacing={2}>
@@ -122,7 +123,14 @@ const Footer = ({
         >
           <Box sx={{ display: "flex" }}>
             {socialMedia?.map((item, index) => (
-              <IconButton color="primary" size="large" key={index}>
+              <IconButton
+                color="primary"
+                size="large"
+                component={Link}
+                key={index}
+                href={item.link}
+                target="_blank"
+              >
                 {item.icon}
               </IconButton>
             ))}
