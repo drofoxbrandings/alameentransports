@@ -8,7 +8,7 @@ export const socialLinks = [
   },
   {
     icon: <InstagramIcon />,
-    link: "https://www.instagram.com/al_ameen_group_uae/",
+    link: "https://www.instagram.com/alameengroup_/?utm_source=qr&igsh=N3pvcGY2NXN3emF1",
   },
   {
     icon: <LinkedInIcon />,
