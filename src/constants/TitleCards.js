@@ -1,7 +1,8 @@
-import limousineTitleImage from "../assets/limousinetitlecardImage.jpg";
-import passengerTitleImage from "../assets/passengertitlecardImage.jpg";
-import tourTitleImage from "../assets/tourtitlecardImage.jpg";
-import schoolTitleImage from "../assets/schooltitlecardImage.jpg";
+import limousineTitleImage from "../assets/heroLimousine.jpg";
+import passengerTitleImage from "../assets/heroPassengerTransportation.jpg";
+import tourTitleImage from "../assets/tousbyluxurybusHero.jpg";
+import schoolTitleImage from "../assets/heroSchoolTransportation.jpg";
+import technicalCenter from "../assets/motor.jpg";
 
 export const titleCards = [
   {
@@ -23,5 +24,10 @@ export const titleCards = [
     title: "School transport",
     image: schoolTitleImage,
     link: "/school-transportation",
+  },
+  {
+    title: "Technical center",
+    image: technicalCenter,
+    link: "/technical-center",
   },
 ];

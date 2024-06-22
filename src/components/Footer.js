@@ -27,7 +27,6 @@ const Footer = ({
 }) => {
   const navigate = useNavigate();
 
-
   return (
     <Container maxWidth="lg" sx={{ padding: "3rem 1rem" }}>
       <Grid container>
@@ -90,13 +89,21 @@ const Footer = ({
         <Grid item xs={12} md={4}>
           <Box>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.226924293676!2d54.537060999999994!3d24.3734081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e47fb280f01a1%3A0x2ef6250379469584!2sAAT%20Transport%20%26%20Limousine%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1698050936975!5m2!1sen!2sae"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.57156904762!2d54.5335069!3d24.326574899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e47fb280f01a1%3A0x2ef6250379469584!2sAAT%20Transport%20%26%20Limousine%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1719040316924!5m2!1sen!2sae"
               width="100%"
               height="150"
               style={{ padding: "2rem 0 0 0", border: "none" }}
               allowFullScreen
               loading="lazy"
             ></iframe>
+            {/* <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.226924293676!2d54.537060999999994!3d24.3734081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e47fb280f01a1%3A0x2ef6250379469584!2sAAT%20Transport%20%26%20Limousine%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1698050936975!5m2!1sen!2sae"
+              width="100%"
+              height="150"
+              style={{ padding: "2rem 0 0 0", border: "none" }}
+              allowFullScreen
+              loading="lazy"
+            ></iframe> */}
           </Box>
           <Box>
             <iframe

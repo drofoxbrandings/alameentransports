@@ -77,14 +77,14 @@ const Hero = ({
             md={4}
             lg={3}
             sx={{
-              display: "flex",
-              justifyContent: { xs: "flex-start", md: "center" },
+              // display: "flex",
+              // justifyContent: { xs: "flex-start", md: "center" },
               padding: "1rem",
             }}
           >
-            <Grid container spacing={{ xs: 2 }}>
+            <Grid container spacing={1} >
               {titleCards.map((item, index) => (
-                <Grid item xs={12} key={index}>
+                <Grid item xs={12} md={6} key={index} >
                   <Link href={item.link} underline="none">
                     <TitleCard
                       image={item.image}
