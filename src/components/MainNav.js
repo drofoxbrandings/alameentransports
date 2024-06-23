@@ -127,7 +127,7 @@ const MainNav = ({ navItems, address }) => {
                                 underline="none"
                                 variant="body1"
                               >
-                                <MenuItem>Limousine</MenuItem>
+                                <MenuItem>Limousine Service</MenuItem>
                               </Link>
 
                               <Link
@@ -280,7 +280,7 @@ const MainNav = ({ navItems, address }) => {
                               },
                             }}
                           >
-                            Limousine
+                            Limousine Service
                           </MenuItem>
                         </Link>
 

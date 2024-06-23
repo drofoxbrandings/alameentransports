@@ -1,4 +1,4 @@
-import { Container, useMediaQuery } from "@mui/material";
+import { Container, Fab, useMediaQuery } from "@mui/material";
 import React from "react";
 import MainNav from "../../components/MainNav";
 import BannerWithText from "../../components/BannerWithText";
@@ -14,8 +14,12 @@ import logoFooter from "../../assets/logoGroup.svg";
 import SectionBreak from "../../components/SectionBreak";
 import TopBar from "../../components/TopBar";
 import { useTheme } from "@emotion/react";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Layout = ({ children }) => {
+  const openWhatsapp = () => {
+    window.open('https://wa.me/+971505058724', "blank")
+  }
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   const navItems = [
@@ -63,6 +67,14 @@ const Layout = ({ children }) => {
         copyright={"2023 - Al Ameen transport L.L.C"}
         links={footerLinks}
       />
+      <Fab
+        color="whatsapp"
+        aria-label="whatsapp chat"
+        sx={{ position: "fixed", bottom: "2rem", right: "2rem",  }}
+        onClick={openWhatsapp}
+      >
+        <WhatsAppIcon sx={{color: 'white.main', fontSize: '32px'}}/>
+      </Fab>
     </Container>
   );
 };

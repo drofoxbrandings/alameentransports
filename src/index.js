@@ -26,6 +26,11 @@ const theme = createTheme({
     error: {
       main: "#d32f2f",
     },
+    whatsapp:{
+      main: '#128C7E',
+      light: '#25D366',
+      dark: '#075E54'
+    }
   },
   typography: {
     fontFamily: 'Raleway, sans-serif',

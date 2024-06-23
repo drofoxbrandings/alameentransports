@@ -6,7 +6,7 @@ import technicalCenter from "../assets/motor.jpg";
 
 export const titleCards = [
   {
-    title: "Limousine",
+    title: "Limousine Service",
     image: limousineTitleImage,
     link: "/limousine-service",
   },

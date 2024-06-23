@@ -6,7 +6,7 @@ import sightSeeingImage1 from "../assets/sightSeeing_passengertransport_1.jpg";
 import sightSeeingImage2 from "../assets/sightSeeing_passengertransport_2.jpg";
 import toyoyaHiace from "../assets/toyoyaHiace.png";
 import mitsubishiRosa from "../assets/mitsubishiRosa.png";
-import toyotaCoaster from "../assets/toyotaCoaster.png";
+import toyotaCoaster from "../assets/coasterNew.png";
 import asokLeyland from "../assets/asokLeyland.png";
 
 export const passengerTransport = {

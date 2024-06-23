@@ -2,10 +2,10 @@ import TourInOmanImage1 from "../assets/omanTour__tourByBus_1.jpg";
 import TourInOmanImage2 from "../assets/omanTour__tourByBus_2.jpg";
 import TourInUaeImage1 from "../assets/uaeTour_TourByBus_1.jpg";
 import TourInUaeImage2 from "../assets/uaeTour_TourByBus_2.png";
-import mercedesSprinter11 from "../assets/mercedesSprinter11.png";
-import mercedesSprinter16 from "../assets/mercedesSprinter16.png";
+import mercedesSprinter11 from "../assets/sprinterWhiteNew.png";
+import mercedesSprinter16 from "../assets/sprinterBlackNew.png";
 import kinglong35 from "../assets/kinglong352.png";
-import kinglong50 from "../assets/kinglong50.png";
+import kinglong50 from "../assets/kinglongNew.png";
 import yutong from "../assets/yutong.png";
 import navigator from "../assets/navigator.png";
 
