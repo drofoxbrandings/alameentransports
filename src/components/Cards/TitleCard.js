@@ -44,6 +44,7 @@ const TitleCard = ({ image, altTxt, title, cardId }) => {
         sx={{
           background: "linear-gradient(45deg, black, transparent)",
           height: "100%",
+          width: '100%',
           position: "absolute",
           top: "0",
           color: "#fff",
