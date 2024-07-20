@@ -12,7 +12,12 @@ const TitleCard = ({ image, altTxt, title, cardId }) => {
     <Card
       onMouseEnter={() => dispatch(expand(`card${cardId}isExpand`))}
       onMouseLeave={() => dispatch(contract(`card${cardId}isExpand`))}
-      sx={{ height: "100%", width: '100%' }}
+      sx={{
+        height: "100%",
+        width: "100%",
+        background: "transparent",
+        position: "relative",
+      }}
     >
       {/* <Grid
         container
@@ -31,13 +36,22 @@ const TitleCard = ({ image, altTxt, title, cardId }) => {
           // borderRadius: "1rem",
           transform: _rsIsExpanded ? "scale(1.2)" : "scale(1)",
           transition: ".25s ease",
-          height: "100px",
+          height: "160px",
           objectFit: "cover",
         }}
       />
-      <CardContent>
+      <CardContent
+        sx={{
+          background: "linear-gradient(45deg, black, transparent)",
+          height: "100%",
+          position: "absolute",
+          top: "0",
+          color: "#fff",
+          display: 'flex', justifyContent: 'center', alignItems: 'center'
+        }}
+      >
         <Typography
-          variant="button"
+          variant="body2"
           sx={{ textTransform: "uppercase", fontWeight: "700" }}
         >
           {title}

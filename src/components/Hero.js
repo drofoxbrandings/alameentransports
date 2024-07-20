@@ -84,7 +84,7 @@ const Hero = ({
           >
             <Grid container spacing={1} >
               {titleCards.map((item, index) => (
-                <Grid item xs={12} md={6} key={index} >
+                <Grid item xs={6} md={6} key={index} >
                   <Link href={item.link} underline="none">
                     <TitleCard
                       image={item.image}
