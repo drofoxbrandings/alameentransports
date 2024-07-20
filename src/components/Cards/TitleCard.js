@@ -44,17 +44,25 @@ const TitleCard = ({ image, altTxt, title, cardId }) => {
         sx={{
           background: "linear-gradient(45deg, black, transparent)",
           height: "100%",
-          width: '100%',
+          width: "100%",
           position: "absolute",
           top: "0",
           color: "#fff",
-          display: 'flex', justifyContent: 'center', alignItems: 'center',
-          padding: 0
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: 0,
         }}
       >
         <Typography
           variant="body2"
-          sx={{ textTransform: "uppercase", fontWeight: "700" }}
+          sx={{
+            textTransform: "uppercase",
+            fontWeight: "700",
+            padding: ".5rem",
+            width: "100%",
+            textAlign: "center",
+          }}
         >
           {title}
         </Typography>

@@ -34,7 +34,7 @@ const Form = ({ submit, company }) => {
   });
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
+    <form onSubmit={handleSubmit(submit)} netlify>
       <FormControl fullWidth margin="normal">
         <Controller
           name="department"
