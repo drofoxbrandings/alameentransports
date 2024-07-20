@@ -48,7 +48,8 @@ const TitleCard = ({ image, altTxt, title, cardId }) => {
           position: "absolute",
           top: "0",
           color: "#fff",
-          display: 'flex', justifyContent: 'center', alignItems: 'center'
+          display: 'flex', justifyContent: 'center', alignItems: 'center',
+          padding: 0
         }}
       >
         <Typography
