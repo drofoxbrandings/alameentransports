@@ -53,14 +53,14 @@ const HomePage = () => {
         banner={aboutUsBanner}
         textOnly={false}
         title="About us"
-        description1="At AAT Limousine, we cater our services with quality, safety and
+        description1="At Al Ameen Group, we cater our services with quality, safety and
             affordability. With a boundless experience in the field of ground
             transportation, and with our well experienced chauffeurs, we are
             committed to serve the community a comfortable and reliable travel
             experience."
         description2="Whether you are on a business trip, or on a leisure trip, or even
         you are out for an evening sight-seeing anywhere around the UAE, we
-        at AAT Limousine serves the best for your needs. Excellence in all
+        at Al Ameen Group serves the best for your needs. Excellence in all
         the departments is our motto and we never fall short of our vision.
         We have a clear vision that relates to a high class standard of
         respect, self-esteem and hard work to its very best."
