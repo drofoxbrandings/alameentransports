@@ -8,7 +8,7 @@ export const schooltransport = {
     {
       title: "CHILD TO SCHOOL / ACADEMICS / SPORTS",
       description:
-        "At AAT, we take pride in providing exceptional transportation solutions for children's school, academics, and sports needs. Safety and reliability are our top priorities, and our team of experienced chauffeurs ensures that young passengers are in safe hands throughout their journey. Whether it's daily school pickups and drop-offs, transportation to academic events or extracurricular activities, or sports practices and games, our fleet of well-equipped vehicles offers a comfortable and secure ride.",
+        "At Al Ameen Group, we take pride in providing exceptional transportation solutions for children's school, academics, and sports needs. Safety and reliability are our top priorities, and our team of experienced chauffeurs ensures that young passengers are in safe hands throughout their journey. Whether it's daily school pickups and drop-offs, transportation to academic events or extracurricular activities, or sports practices and games, our fleet of well-equipped vehicles offers a comfortable and secure ride.",
       image1: childToSchoolImage1,
       image2: childToSchoolImage2,
     },

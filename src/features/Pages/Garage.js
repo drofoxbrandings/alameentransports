@@ -18,7 +18,7 @@ const Garage = () => {
       image: `${mechanicService}`,
       title: "Mechanic Service",
       subtitle: "",
-      desc: "AAT Auto Garage provides expert vehicle maintenance, repair, and diagnostics. Our skilled mechanics resolve mechanical and electrical issues, ensuring top performance, safety, and longevity. With advanced tools and quality parts, we deliver reliable solutions for smooth-running vehicles trusted by drivers.",
+      desc: "Al Ameen Auto Garage provides expert vehicle maintenance, repair, and diagnostics. Our skilled mechanics resolve mechanical and electrical issues, ensuring top performance, safety, and longevity. With advanced tools and quality parts, we deliver reliable solutions for smooth-running vehicles trusted by drivers.",
       serviceList: [
         "General Service",
         "Oil Change",

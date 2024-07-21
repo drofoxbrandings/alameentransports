@@ -27,7 +27,7 @@ const Contact = () => {
         altTxt="luxury limousine services - uae"
         isFullWidthHero={false}
         title="Get in touch"
-        description="Thank you for considering Al Ameen for your premier luxury transportation needs. Our dedicated team is here to assist you with any inquiries or booking requests."
+        description="Thank you for considering Al Ameen Group for your premier luxury transportation needs. Our dedicated team is here to assist you with any inquiries or booking requests."
       />
       <SectionBreak />
       <Container maxWidth="lg">

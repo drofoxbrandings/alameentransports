@@ -23,7 +23,7 @@ const HomePage = () => {
         altTxt="luxury transportation services - abu dhabi"
         isFullWidthHero={true}
         title="Redefining Mobility"
-        description="Embrace a new era of transportation with innovative solutions that transcend the ordinary. At AAT, we're dedicated to revolutionizing how you move from point A to point B"
+        description="Embrace a new era of transportation with innovative solutions that transcend the ordinary. At Al Ameen Group, we're dedicated to revolutionizing how you move from point A to point B"
         btnLabel="Enquire now"
         btnFn={() => dispatch(openForm(""))}
       />
