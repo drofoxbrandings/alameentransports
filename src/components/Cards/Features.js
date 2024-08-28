@@ -18,7 +18,7 @@ const Features = ({ image, label, description }) => {
         }
       />
       <CardContent>
-        <Typography variant="h6">{label}</Typography>
+        <Typography variant="h6" sx={{marginBottom: '1rem', fontWeight: 600}}>{label}</Typography>
         <Typography variant="body1" sx={{textAlign: 'justify'}}>{description}</Typography>
       </CardContent>
     </Card>

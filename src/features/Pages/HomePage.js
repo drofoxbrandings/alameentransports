@@ -22,8 +22,10 @@ const HomePage = () => {
         image={homeHero}
         altTxt="luxury transportation services - abu dhabi"
         isFullWidthHero={true}
-        title="Redefining Mobility"
-        description="Embrace a new era of transportation with innovative solutions that transcend the ordinary. At Al Ameen Group, we're dedicated to revolutionizing how you move from point A to point B"
+        // title="Redefining Mobility"
+        title="Discover the height of luxury with Al Ameen Group of Transportation and Limousine. "
+        // description="Embrace a new era of transportation with innovative solutions that transcend the ordinary. At Al Ameen Group, we're dedicated to revolutionizing how you move from point A to point B"
+        description="Specializing in luxury limousine and bus transportation, we offer premier airport transfers and staff transfers across Abu Dhabi and Dubai for an unparalleled travel experience."
         btnLabel="Enquire now"
         btnFn={() => dispatch(openForm(""))}
       />
@@ -53,17 +55,9 @@ const HomePage = () => {
         banner={aboutUsBanner}
         textOnly={false}
         title="About us"
-        description1="At Al Ameen Group, we cater our services with quality, safety and
-            affordability. With a boundless experience in the field of ground
-            transportation, and with our well experienced chauffeurs, we are
-            committed to serve the community a comfortable and reliable travel
-            experience."
-        description2="Whether you are on a business trip, or on a leisure trip, or even
-        you are out for an evening sight-seeing anywhere around the UAE, we
-        at Al Ameen Group serves the best for your needs. Excellence in all
-        the departments is our motto and we never fall short of our vision.
-        We have a clear vision that relates to a high class standard of
-        respect, self-esteem and hard work to its very best."
+        description1="At Al Ameen Luxury Limousine Service, we redefine the standards of elegance and comfort in Abu Dhabi and Dubai. Our premier limousine service offers an unparalleled transportation experience, ensuring every journey is marked by sophistication and ease. Whether you’re attending a high-profile event or simply need reliable transportation, our limousine service guarantees a seamless and luxurious ride."
+        description2="We pride ourselves on delivering exceptional service tailored to your needs. Our fleet of high-end vehicles is meticulously maintained to provide the ultimate in luxury and safety. With Al Ameen Luxury Limousine Service, you can expect not just a ride, but an experience where every detail is handled with care and professionalism."
+        description3="Our commitment to excellence in transportation ensures that you arrive at your destination on time and in style. From airport transfers to corporate events, our limousine service in Abu Dhabi and Dubai is designed to meet the highest standards of quality. Choose Al Ameen for your next journey and discover why our transportation services are the epitome of luxury and reliability."
       />
 
       <SectionBreak />

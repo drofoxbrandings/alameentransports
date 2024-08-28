@@ -8,6 +8,7 @@ const BannerWithText = ({
   title,
   description1,
   description2,
+  description3,
   banner,
   minHeight,
 }) => {
@@ -85,6 +86,13 @@ const BannerWithText = ({
               sx={{ textAlign: "justify", marginBottom: "1rem" }}
             >
               {description2}
+            </Typography>
+            <Typography
+              variant="body2"
+              color="white.main"
+              sx={{ textAlign: "justify", marginBottom: "1rem" }}
+            >
+              {description3}
             </Typography>
           </Container>
         )}

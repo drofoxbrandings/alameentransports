@@ -1,26 +1,21 @@
 import safe from "../assets/safeIcon.svg";
 import reliable from "../assets/reliableIcon.svg";
-import affordable from '../assets/afforIcon.svg'
+import affordable from "../assets/afforIcon.svg";
 
 export const features = [
   {
     title: "SAFETY",
     image: `${safe}`,
-    description: `Offering passangers peace of mind with meticulously trained and
-    experienced drivers,top-of-the-line vehicles equipped with advanced
-    safety features, and rigorous adherence to strict safety protocols.`,
+    description: `At Al Ameen Group of Limousine & Transportation, we prioritize your safety with meticulous vehicle maintenance, highly trained drivers, and advanced tracking systems. Our commitment to the highest safety standards ensures a secure and dependable travel experience every time.`,
   },
   {
     title: "RELIABILITY",
     image: `${reliable}`,
-    description: `Ensuring punctuality,seamless coordination, and consistence 
-      highr-quality service,allowing clients to confidently rely on their 
-      chauffeur for all their transportation needs.`,
+    description: `With a commitment to punctuality, seamless coordination, and consistently high-quality service, our transportation in the UAE ensures that you can depend on us for all your travel needs. Trust our expert chauffeurs to deliver a dependable and smooth experience every time.`,
   },
   {
     title: "AFFORDABLE",
-    image:`${affordable}`,
-    description: `With competitive pricing,offering value for money while
-       maintaining the highest standards of comfort,elegance,and personalised service.`,
+    image: `${affordable}`,
+    description: `Offering competitive rates, our transportation services in the UAE deliver exceptional value for money. We balance cost-effectiveness with the highest standards of comfort, reliability, and personalized service, ensuring you receive premium travel experiences without compromising your budget.`,
   },
 ];
