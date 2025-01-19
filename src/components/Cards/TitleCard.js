@@ -42,7 +42,7 @@ const TitleCard = ({ image, altTxt, title, cardId }) => {
       />
       <CardContent
         sx={{
-          background: "linear-gradient(45deg, black, transparent)",
+          background: "linear-gradient(45deg, #000000a6, transparent)",
           height: "100%",
           width: "100%",
           position: "absolute",

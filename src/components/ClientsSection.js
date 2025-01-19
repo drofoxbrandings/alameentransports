@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const ClientsSection = ({ clientImages }) => {
@@ -12,32 +12,64 @@ const ClientsSection = ({ clientImages }) => {
           Some happy customers
         </Typography>
       </Grid>
-      {clientImages?.map((item, index) => (
-        <Grid
-          key={index}
-          item
-          xs={6}
-          md={2}
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            maxHeight: "320px",
-            padding: "1rem",
-            "& img": {
-              objectFit: "contain",
-            },
-            margin: "2rem 0",
-          }}
-        >
-          <img
-            width="100%"
-            height="100px"
-            src={item.image}
-            alt={`${item.label}`}
-          />
+
+      <Box sx={{ width: "100%" }}>
+        <Grid container spacing={2} justifyContent="center">
+          {clientImages?.map((item, index) => (
+            <Grid item xs={6} md="auto" key={index}>
+              <Box
+                sx={{
+                  maxHeight: "320px",
+                  padding: "1rem",
+                  "& img": {
+                    objectFit: "contain",
+                  },
+                  border: "1px solid #ddd",
+                }}
+              >
+                <img
+                  width="100%"
+                  height="100px"
+                  src={item.image}
+                  alt={`${item.label}`}
+                />
+              </Box>
+            </Grid>
+          ))}
         </Grid>
-      ))}
+      </Box>
+
+      {/* <Stack
+        direction={"row"}
+        sx={{
+          justifyContent: "center",
+          flexWrap: "wrap",
+          width: "100%",
+        }}
+      >
+        {clientImages?.map((item, index) => (
+          <Box
+            key={index}
+            sx={{
+              margin: ".5rem",
+              maxHeight: "320px",
+              padding: "1rem",
+              width: { xs: "calc(50% - 1rem)", md: "auto" },
+              "& img": {
+                objectFit: "contain",
+              },
+              border: "1px solid #ddd",
+            }}
+          >
+            <img
+              width="100%"
+              height="100px"
+              src={item.image}
+              alt={`${item.label}`}
+            />
+          </Box>
+        ))}
+      </Stack> */}
     </Grid>
   );
 };

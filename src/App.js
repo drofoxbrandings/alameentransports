@@ -15,6 +15,7 @@ import { Box } from "@mui/material";
 import { createStyles, makeStyles } from "@mui/styles";
 import { closeForm } from "./features/Slices/HomepageSlice";
 import Garage from "./features/Pages/Garage";
+import CarRental from "./features/Pages/CarRental";
 
 function App() {
   const popUpFormState = useSelector((state) => state.homepage.showForm);
@@ -70,6 +71,7 @@ function App() {
         element={<SchoolTransportation />}
       />
       <Route exact path="/technical-center" element={<Garage />} />
+      <Route exact path="/rent-a-car" element={<CarRental />} />
     </Routes>
   );
 }

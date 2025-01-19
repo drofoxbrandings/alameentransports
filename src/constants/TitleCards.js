@@ -3,6 +3,7 @@ import passengerTitleImage from "../assets/heroPassengerTransportation.jpg";
 import tourTitleImage from "../assets/tousbyluxurybusHero.jpg";
 import schoolTitleImage from "../assets/heroSchoolTransportation.jpg";
 import technicalCenter from "../assets/motor.jpg";
+import carRent from "../assets/car-rent.jpg";
 
 export const titleCards = [
   {
@@ -29,5 +30,10 @@ export const titleCards = [
     title: "Technical center",
     image: technicalCenter,
     link: "/technical-center",
+  },
+  {
+    title: "Rent a car",
+    image: carRent,
+    link: "/rent-a-car",
   },
 ];

@@ -48,7 +48,7 @@ const Hero = ({
               sx={{
                 textTransform: "uppercase",
                 marginBottom: ".5rem",
-                fontSize: { xs: "3rem" },
+                fontSize: { xs: "2rem", md: "3rem" },
               }}
             >
               {title}
@@ -82,9 +82,9 @@ const Hero = ({
               padding: "1rem",
             }}
           >
-            <Grid container spacing={1} >
+            <Grid container spacing={1}>
               {titleCards.map((item, index) => (
-                <Grid item xs={6} md={6} key={index} >
+                <Grid item xs={6} md={6} key={index}>
                   <Link href={item.link} underline="none">
                     <TitleCard
                       image={item.image}

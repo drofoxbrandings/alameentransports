@@ -162,6 +162,14 @@ const MainNav = ({ navItems, address }) => {
                               >
                                 <MenuItem>Technical Center</MenuItem>
                               </Link>
+                              <Link
+                                href="/rent-a-car"
+                                color="secondary.main"
+                                underline="none"
+                                variant="body1"
+                              >
+                                <MenuItem>Rent a Car</MenuItem>
+                              </Link>
                             </AccordionDetails>
                           </Accordion>
                         ) : (
@@ -367,6 +375,27 @@ const MainNav = ({ navItems, address }) => {
                             }}
                           >
                             Technical Center
+                          </MenuItem>
+                        </Link>
+                        <Link
+                          href={"/rent-a-car"}
+                          color="secondary.main"
+                          underline="none"
+                          variant="body1"
+                          sx={{
+                            margin: "2rem 0",
+                          }}
+                        >
+                          <MenuItem
+                            sx={{
+                              padding: "1rem",
+                              "&:hover": {
+                                backgroundColor: "primary.main",
+                                color: "#fff",
+                              },
+                            }}
+                          >
+                            Rent a Car
                           </MenuItem>
                         </Link>
                       </Box>
